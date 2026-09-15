@@ -1,0 +1,146 @@
+{
+  "source": "https://www.flamengo.com.br/",
+  "updatedAt": "2026-09-13T21:40:08.000Z",
+  "matches": [
+    {
+      "id": "2026-09-06-remo-flamengo",
+      "date": "2026-09-06T16:00:00-03:00",
+      "name": "Remo x Flamengo",
+      "competition": "Serie A",
+      "status": "Encerrado",
+      "state": "post",
+      "home": {
+        "name": "Remo",
+        "short": "",
+        "logo": "",
+        "score": "0"
+      },
+      "away": {
+        "name": "Flamengo",
+        "short": "",
+        "logo": "",
+        "score": "1"
+      }
+    },
+    {
+      "id": "2026-09-10-independiente-valle-flamengo",
+      "date": "2026-09-10T21:30:00-03:00",
+      "name": "Independiente Valle x Flamengo",
+      "competition": "CONMEBOL Libertadores",
+      "status": "Encerrado",
+      "state": "post",
+      "home": {
+        "name": "Independiente Valle",
+        "short": "",
+        "logo": "",
+        "score": "0"
+      },
+      "away": {
+        "name": "Flamengo",
+        "short": "",
+        "logo": "",
+        "score": "2"
+      }
+    },
+    {
+      "id": "2026-09-13-flamengo-corinthians",
+      "date": "2026-09-13T17:30:00-03:00",
+      "name": "Flamengo x Corinthians",
+      "competition": "Serie A",
+      "status": "Estadio Jornalista Mário Filho (Maracanã)",
+      "state": "pre",
+      "home": {
+        "name": "Flamengo",
+        "short": "",
+        "logo": "",
+        "score": ""
+      },
+      "away": {
+        "name": "Corinthians",
+        "short": "",
+        "logo": "",
+        "score": ""
+      }
+    },
+    {
+      "id": "2026-09-17-flamengo-independiente-valle",
+      "date": "2026-09-17T21:30:00-03:00",
+      "name": "Flamengo x Independiente Valle",
+      "competition": "CONMEBOL Libertadores",
+      "status": "Estadio Jornalista Mário Filho (Maracanã)",
+      "state": "pre",
+      "home": {
+        "name": "Flamengo",
+        "short": "",
+        "logo": "",
+        "score": ""
+      },
+      "away": {
+        "name": "Independiente Valle",
+        "short": "",
+        "logo": "",
+        "score": ""
+      }
+    },
+    {
+      "id": "2026-09-20-flamengo-rb-bragantino",
+      "date": "2026-09-20T18:30:00-03:00",
+      "name": "Flamengo x RB Bragantino",
+      "competition": "Serie A",
+      "status": "Estadio Jornalista Mário Filho (Maracanã)",
+      "state": "pre",
+      "home": {
+        "name": "Flamengo",
+        "short": "",
+        "logo": "",
+        "score": ""
+      },
+      "away": {
+        "name": "RB Bragantino",
+        "short": "",
+        "logo": "",
+        "score": ""
+      }
+    },
+    {
+      "id": "2026-10-08-santos-flamengo",
+      "date": "2026-10-08T19:30:00-03:00",
+      "name": "Santos x Flamengo",
+      "competition": "Serie A",
+      "status": "Estádio Urbano Caldeira",
+      "state": "pre",
+      "home": {
+        "name": "Santos",
+        "short": "",
+        "logo": "",
+        "score": ""
+      },
+      "away": {
+        "name": "Flamengo",
+        "short": "",
+        "logo": "",
+        "score": ""
+      }
+    },
+    {
+      "id": "2026-10-11-flamengo-fluminense",
+      "date": "2026-10-11T17:30:00-03:00",
+      "name": "Flamengo x Fluminense",
+      "competition": "Serie A",
+      "status": "Estadio Jornalista Mário Filho (Maracanã)",
+      "state": "pre",
+      "home": {
+        "name": "Flamengo",
+        "short": "",
+        "logo": "",
+        "score": ""
+      },
+      "away": {
+        "name": "Fluminense",
+        "short": "",
+        "logo": "",
+        "score": ""
+      }
+    }
+  ]
+}

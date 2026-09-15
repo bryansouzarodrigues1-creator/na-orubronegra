@@ -1,0 +1,1 @@
+CREATE INDEX `groups_status_category_created` ON `groups` (`status`,`category`,`created`);

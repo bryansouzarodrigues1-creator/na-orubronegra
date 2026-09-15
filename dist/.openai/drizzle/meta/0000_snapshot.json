@@ -1,0 +1,73 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "22031f51-6759-46ad-8cce-a2f707c65d52",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "votes": {
+      "name": "votes",
+      "columns": {
+        "poll": {
+          "name": "poll",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "voter": {
+          "name": "voter",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "player": {
+          "name": "player",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created": {
+          "name": "created",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "votes_poll_player": {
+          "name": "votes_poll_player",
+          "columns": [
+            "poll",
+            "player"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "votes_poll_voter_pk": {
+          "columns": [
+            "poll",
+            "voter"
+          ],
+          "name": "votes_poll_voter_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

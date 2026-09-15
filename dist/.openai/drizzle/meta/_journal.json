@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1788890437906,
+      "tag": "0000_open_roughhouse",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1788914795991,
+      "tag": "0001_uneven_zarda",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1789333619751,
+      "tag": "0002_tidy_nextwave",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1789337534978,
+      "tag": "0003_scale_group_directory",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1789434463181,
+      "tag": "0004_ambitious_red_skull",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1789472089815,
+      "tag": "0005_fan_community",
+      "breakpoints": true
+    }
+  ]
+}
