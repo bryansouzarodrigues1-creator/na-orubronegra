@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "dist"
+  publish = "netlify/static"
   edge_functions = "netlify/edge-functions"
 
 [build.environment]
@@ -9,11 +9,3 @@
 [[edge_functions]]
   function = "portal"
   path = "/*"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-

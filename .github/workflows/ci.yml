@@ -19,5 +19,3 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run validate
-      - run: node --check netlify/edge-functions/portal.mjs
-

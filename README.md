@@ -14,12 +14,17 @@ npm run validate
 
 O artefato principal é gerado em `dist/server/index.js`.
 
-## Publicar pelo GitHub e Netlify
+## Publicar no Netlify
 
-1. Crie um repositório vazio no GitHub e envie esta pasta para ele.
-2. No Netlify, escolha **Add new project → Import an existing project** e conecte o repositório.
-3. O Netlify lerá `netlify.toml`: o build é `npm run build`, o diretório publicado é `dist` e o portal é executado por uma Edge Function.
-4. Defina o domínio final no Netlify antes de divulgar o site.
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/bryansouzarodrigues1-creator/na-orubronegra)
+
+Também é possível escolher **Add new project → Import an existing project** e conectar este repositório. O Netlify lerá `netlify.toml`, executará `npm run build` com Node.js 22 e publicará o portal por uma Edge Function. Nenhuma configuração de diretório precisa ser preenchida manualmente.
+
+Depois do primeiro deploy:
+
+1. Abra o endereço `*.netlify.app` e confira notícias, jogos, vídeos e idiomas.
+2. Configure o domínio final antes de indexar o portal no Google.
+3. Para habilitar votos, palpites, notas, grupos e comunidade, configure o backend persistente descrito abaixo.
 
 ### Banco das votações e da comunidade
 
@@ -31,6 +36,8 @@ No painel do Netlify, crie a variável de ambiente:
 PORTAL_BACKEND_ORIGIN=https://api.seu-dominio.com
 ```
 
+Se o backend exigir autenticação entre servidores, adicione também `PORTAL_BACKEND_TOKEN` no painel. Não salve tokens no GitHub.
+
 A Edge Function encaminhará somente as rotas persistentes para esse serviço. Notícias, calendário, páginas, vídeos, SEO e idiomas continuam sendo servidos pelo próprio projeto. Uma implantação definitiva pode manter um Worker público para os dados ou migrar as tabelas de `drizzle/` para um Postgres compatível.
 
 ## Estrutura
@@ -38,6 +45,7 @@ A Edge Function encaminhará somente as rotas persistentes para esse serviço. N
 - `src/`: portal, estilos, scripts, fontes e integrações.
 - `drizzle/`: migrações do banco atual.
 - `netlify/edge-functions/`: adaptador para o Netlify.
+- `netlify/static/`: diretório público mínimo; as páginas são produzidas pela Edge Function.
 - `.github/workflows/ci.yml`: build e validação automáticos no GitHub.
 - `.openai/hosting.json`: configuração da implantação atual em Sites.
 
