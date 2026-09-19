@@ -19,7 +19,16 @@ assert.match(manifest.headers.get('content-type')||'',/manifest|json/,'O manifes
 
 const stateful=await handler(new Request(origin+'/api/polls'),context);
 assert.equal(stateful.status,503,'Rotas persistentes sem backend devem falhar de forma segura');
-assert.match((await stateful.json()).error,/configuração do banco de dados/,'A mensagem de configuração do backend mudou inesperadamente');
+const statefulBody=await stateful.json();
+assert.equal(statefulBody.code,'PERSISTENCE_UNCONFIGURED','A API precisa identificar a ausência do backend para o fallback local');
+assert.equal(statefulBody.localFallback,true,'A API precisa sinalizar que a experiência local pode assumir');
+assert.match(statefulBody.error,/configuração do banco de dados/,'A mensagem de configuração do backend mudou inesperadamente');
+
+const community=await handler(new Request(origin+'/api/community?kind=unpopular'),context);
+assert.equal(community.status,503,'A comunidade também precisa passar pelo adaptador persistente');
+const communityBody=await community.json();
+assert.equal(communityBody.code,'PERSISTENCE_UNCONFIGURED','A comunidade não está sendo interceptada pelo proxy persistente');
+assert.equal(communityBody.localFallback,true,'A comunidade deve expor o mesmo contrato de indisponibilidade');
 
 await Promise.allSettled(pending);
 console.log('Netlify adapter: ok');
