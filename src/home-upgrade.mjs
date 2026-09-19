@@ -9,6 +9,71 @@ const intro=`<div id="intro" class="intro" hidden aria-label="Abertura Flamengo 
 </div>
 `;
 
+
+const matchVisuals=`<section class="flamengo-visual-strip" aria-label="Experiências da central rubro-negra">
+ <article class="flamengo-visual visual-score">
+  <svg viewBox="0 0 360 220" role="img" aria-label="Ilustração de um placar rubro-negro em um estádio">
+   <defs><linearGradient id="stadiumGlow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e0001b"/><stop offset="1" stop-color="#5b0010"/></linearGradient></defs>
+   <path class="v-crowd" d="M0 70C56 30 112 42 180 54s124-16 180 14v152H0z"/>
+   <path class="v-light" d="M48 0h9l18 61H29zM303 0h9l19 61h-47z"/>
+   <rect class="v-screen" x="72" y="35" width="216" height="118" rx="10"/>
+   <text class="v-kicker" x="180" y="61" text-anchor="middle">DIA DE FLAMENGO</text>
+   <text class="v-team" x="119" y="107" text-anchor="middle">FLA</text><text class="v-x" x="180" y="106" text-anchor="middle">×</text><text class="v-team" x="241" y="107" text-anchor="middle">RIVAL</text>
+   <rect class="v-red" x="94" y="122" width="172" height="5" rx="3"/>
+   <path class="v-pitch" d="M38 178h284v42H38z"/><circle class="v-pitch-line" cx="180" cy="199" r="17"/><path class="v-pitch-line" d="M180 178v42M38 199h284"/>
+  </svg>
+  <div><span>PLACAR</span><strong>O jogo começa aqui.</strong><small>Horário, local, resultado e lances em uma leitura rápida.</small></div>
+ </article>
+ <article class="flamengo-visual visual-lineup">
+  <svg viewBox="0 0 360 220" role="img" aria-label="Ilustração de uma prancheta tática com a escalação do Flamengo">
+   <rect class="v-board" x="42" y="16" width="276" height="188" rx="18"/>
+   <path class="v-field-line" d="M180 31v157M63 109h234M180 81a28 28 0 1 0 0 56 28 28 0 1 0 0-56M63 64h42v90H63M255 64h42v90h-42"/>
+   <g class="v-dots"><circle cx="87" cy="109" r="10"/><circle cx="132" cy="70" r="10"/><circle cx="132" cy="109" r="10"/><circle cx="132" cy="150" r="10"/><circle cx="181" cy="58" r="10"/><circle cx="181" cy="91" r="10"/><circle cx="181" cy="128" r="10"/><circle cx="181" cy="164" r="10"/><circle cx="233" cy="74" r="10"/><circle cx="244" cy="111" r="10"/><circle cx="233" cy="149" r="10"/></g>
+   <path class="v-arrow" d="M207 164c34-12 43-35 44-62m0 0-12 13m12-13 9 15"/>
+  </svg>
+  <div><span>ESCALAÇÃO</span><strong>Prancheta com contexto.</strong><small>Confirmada quando a fonte publica; provável quando usamos a última base disponível.</small></div>
+ </article>
+ <article class="flamengo-visual visual-prediction">
+  <svg viewBox="0 0 360 220" role="img" aria-label="Ilustração de torcedores montando um palpite de placar">
+   <path class="v-crowd-back" d="M0 162c38-28 68-24 98 0 34-34 73-32 108 0 32-28 67-26 102 0 17-13 35-18 52-12v70H0z"/>
+   <rect class="v-ticket" x="62" y="30" width="236" height="118" rx="16"/>
+   <text class="v-kicker" x="180" y="58" text-anchor="middle">PALPITE DA NAÇÃO</text>
+   <rect class="v-score-box" x="93" y="77" width="64" height="52" rx="9"/><rect class="v-score-box" x="203" y="77" width="64" height="52" rx="9"/>
+   <text class="v-score" x="125" y="114" text-anchor="middle">2</text><text class="v-x" x="180" y="111" text-anchor="middle">×</text><text class="v-score" x="235" y="114" text-anchor="middle">1</text>
+   <circle class="v-head" cx="99" cy="177" r="16"/><path class="v-shirt" d="M71 220v-22c0-19 13-30 28-30s29 11 29 30v22"/>
+   <circle class="v-head" cx="260" cy="177" r="16"/><path class="v-shirt" d="M232 220v-22c0-19 13-30 28-30s29 11 29 30v22"/>
+  </svg>
+  <div><span>PALPITE</span><strong>Seu placar, sem enrolação.</strong><small>Monte em poucos toques e acompanhe o ranking quando o serviço global estiver ativo.</small></div>
+ </article>
+</section>`;
+
+const voteVisual=`<div class="vote-visual" aria-label="Votação da torcida rubro-negra">
+ <svg viewBox="0 0 760 250" role="img" aria-label="Ilustração de uma torcida do Flamengo erguendo um troféu">
+  <path class="vote-crowd" d="M0 156c74-51 133-36 188 5 53-62 132-61 190 0 54-54 127-52 188 3 57-42 123-41 194 4v82H0z"/>
+  <g class="vote-rays"><path d="M380 0v63M254 26l61 57M506 26l-61 57M191 97l91 22M569 97l-91 22"/></g>
+  <path class="vote-cup" d="M334 54h92v31c0 41-20 70-46 70s-46-29-46-70zM353 155h54v18h-54zM330 173h100v22H330z"/>
+  <path class="vote-handle" d="M334 70h-28c-2 39 16 56 43 60M426 70h28c2 39-16 56-43 60"/>
+  <text x="380" y="112" text-anchor="middle" class="vote-crf">CRF</text>
+  <circle class="fan-head" cx="196" cy="174" r="19"/><path class="fan-shirt" d="M155 250v-40c0-28 18-45 41-45s42 17 42 45v40"/>
+  <circle class="fan-head" cx="565" cy="174" r="19"/><path class="fan-shirt" d="M524 250v-40c0-28 18-45 41-45s42 17 42 45v40"/>
+ </svg>
+ <div><span>UM TOQUE. UM VOTO.</span><strong>A arquibancada vira ranking.</strong><p>Escolha um jogador e acompanhe o resultado real. Se a conexão com o banco cair, o voto fica protegido neste aparelho.</p></div>
+</div>`;
+
+const communityVisual=`<div class="community-visual" aria-label="Debate da torcida">
+ <svg viewBox="0 0 920 360" role="img" aria-label="Dois torcedores do Flamengo conversando e discutindo futebol">
+  <defs><linearGradient id="fanBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1a0509"/><stop offset=".55" stop-color="#080808"/><stop offset="1" stop-color="#3d0008"/></linearGradient></defs>
+  <rect class="cv-bg" width="920" height="360" rx="26"/>
+  <path class="cv-stand" d="M0 280c107-64 204-39 300 6 107-72 221-68 320 4 108-69 200-61 300 2v68H0z"/>
+  <g class="cv-fan left"><circle class="cv-skin" cx="236" cy="126" r="48"/><path class="cv-hair" d="M189 117c3-45 28-67 57-63 31 4 44 28 39 56-18-14-45-18-73-8z"/><path class="cv-body" d="M137 360v-103c0-62 42-98 99-98s99 36 99 98v103"/><path class="cv-stripe" d="M150 225h172v31H146zM138 288h196v32H138z"/><path class="cv-arm" d="M319 231c44-28 69-33 98-21l-9 31c-23-6-43 2-76 28z"/><circle class="cv-skin" cx="414" cy="224" r="15"/></g>
+  <g class="cv-fan right"><circle class="cv-skin" cx="684" cy="126" r="48"/><path class="cv-hair" d="M638 117c8-48 35-68 66-61 28 6 39 30 31 57-19-13-43-16-72-7z"/><path class="cv-body" d="M585 360v-103c0-62 42-98 99-98s99 36 99 98v103"/><path class="cv-stripe" d="M598 225h172v31H594zM586 288h196v32H586z"/><path class="cv-arm" d="M600 228c-44-24-74-28-101-13l12 29c22-8 43-2 76 24z"/><circle class="cv-skin" cx="496" cy="228" r="15"/></g>
+  <g class="cv-bubble one"><rect x="83" y="32" width="250" height="72" rx="18"/><path d="M266 101l-5 27 30-27"/><text x="208" y="62" text-anchor="middle">QUEM TEM QUE SER TITULAR?</text><text x="208" y="84" text-anchor="middle">A escalação divide a Nação.</text></g>
+  <g class="cv-bubble two"><rect x="587" y="28" width="248" height="72" rx="18"/><path d="M650 98l15 26 15-26"/><text x="711" y="59" text-anchor="middle">E O SEU PALPITE?</text><text x="711" y="82" text-anchor="middle">Fala aí antes da bola rolar.</text></g>
+  <circle class="cv-ball" cx="460" cy="300" r="28"/><path class="cv-ball-line" d="M439 285l21-12 21 12-8 24h-26zM460 273v-18M439 285l-16-7M481 285l16-7M447 309l-11 14M473 309l11 14"/>
+ </svg>
+ <div class="community-visual-copy"><span>DOIS LADOS. A MESMA CAMISA.</span><strong>Debate de arquibancada, não formulário.</strong><p>Opinião, escalação e chat foram desenhados para parecer conversa de torcedor: rápido, direto e com identidade rubro-negra.</p></div>
+</div>`;
+
 const liveboard=`<div id="match-liveboard" class="match-liveboard" aria-live="polite">
  <div class="liveboard-loading"><span></span> Preparando o placar do Mengão…</div>
 </div>`;
@@ -90,6 +155,7 @@ const craque=`<div class="craque-callout">
 const communityZone=`<section id="comunidade" class="community-zone">
  <div class="wrap">
   <div class="section-heading community-heading"><div><span class="eyebrow">VOZ DA ARQUIBANCADA</span><h2>CONVERSA<br>RUBRO-NEGRA<span>.</span></h2></div><div class="fan-identity"><small>VOCÊ ENTRA COMO</small><button id="fan-alias" type="button">Preparando apelido…</button></div></div>
+  ${communityVisual}
   <nav class="community-tabs" role="tablist" aria-label="Áreas da comunidade">
    <button type="button" role="tab" aria-selected="true" data-community-tab="opinions"><span>01</span><b>OPINIÕES IMPOPULARES</b><small>Faz sentido ou não?</small></button>
    <button type="button" role="tab" aria-selected="false" data-community-tab="lineup"><span>02</span><b>DEBATE DE ESCALAÇÃO</b><small>Quem merece a vaga?</small></button>
@@ -129,8 +195,8 @@ export function upgradeHome(value){
   .replace('<div class="header-actions">','<div class="header-actions"><nav class="language-switcher desktop-language" aria-label="Idioma"><a data-lang="pt" href="/">PT</a><a data-lang="en" href="/en">EN</a><a data-lang="es" href="/es">ES</a></nav>')
   .replace('<main id="inicio">','<main id="inicio"><span id="conteudo" class="content-anchor" tabindex="-1"></span>'+mobileHub+'<section id="route-banner"></section>')
   .replace(/<nav class="archive-entry wrap">[\s\S]*?<\/nav>/,portalMap)
-  .replace('<div id="matches" class="match-grid">',liveboard+matchdayNow+'<div id="matches" class="match-grid">')
-  .replace('<div class="poll-tabs"',craque+'<div class="poll-tabs"')
+  .replace('<div id="matches" class="match-grid">',matchVisuals+liveboard+matchdayNow+'<div id="matches" class="match-grid">')
+  .replace('<div class="poll-tabs"',voteVisual+craque+'<div class="poll-tabs"')
   .replace('<section id="grupos"',communityZone+communityShare+'<section id="grupos"')
   .replace('</div></div><aside class="group-submit">','</div><button id="more-groups" class="wide-button" hidden>CARREGAR MAIS GRUPOS ↓</button></div><aside class="group-submit">')
   .replace('href="https://youtu.be/MAK86Imhwww?si=PhTPpIa4SHjAJSOv" target="_blank" rel="noopener"','href="https://www.youtube.com/watch?v=MAK86Imhwww" data-video="MAK86Imhwww" data-video-title="Flamengo 3 × 0 Liverpool · Mundial 1981"')
