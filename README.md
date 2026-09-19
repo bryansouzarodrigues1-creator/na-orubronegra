@@ -24,11 +24,13 @@ Depois do primeiro deploy:
 
 1. Abra o endereço `*.netlify.app` e confira notícias, jogos, vídeos e idiomas.
 2. Configure o domínio final antes de indexar o portal no Google.
-3. Para habilitar votos, palpites, notas, grupos e comunidade, configure o backend persistente descrito abaixo.
+3. As enquetes principais já persistem automaticamente via Netlify Blobs. Para habilitar palpites globais, notas, grupos e comunidade, configure o backend estruturado descrito abaixo.
 
-### Banco das votações e da comunidade
+### Persistência das enquetes e da comunidade
 
-O ambiente atual usa Cloudflare D1 para votos, palpites, notas e grupos. D1 não é disponibilizado automaticamente em um deploy do Netlify. Para impedir votos falsos ou dados descartáveis, a adaptação do Netlify deixa essas rotas indisponíveis até existir um serviço persistente.
+As **enquetes principais** usam um store site-wide do Netlify Blobs no próprio Edge Function. Cada navegador recebe um identificador aleatório em cookie, o primeiro voto por enquete é persistido entre deploys e o placar é reconstruído apenas de votos realmente registrados.
+
+Palpites de jogos, notas, grupos e comunidade continuam usando o modelo relacional existente (Cloudflare D1 no runtime original). Como essas áreas exigem consultas, moderação e relacionamentos mais complexos, o deploy do Netlify encaminha somente essas rotas para um backend persistente quando `PORTAL_BACKEND_ORIGIN` estiver configurado. Sem ele, a interface entra em estado degradado explícito em vez de fingir que salvou dados globalmente.
 
 No painel do Netlify, crie a variável de ambiente:
 
@@ -38,7 +40,7 @@ PORTAL_BACKEND_ORIGIN=https://api.seu-dominio.com
 
 Se o backend exigir autenticação entre servidores, adicione também `PORTAL_BACKEND_TOKEN` no painel. Não salve tokens no GitHub.
 
-A Edge Function encaminhará somente as rotas persistentes para esse serviço. Notícias, calendário, páginas, vídeos, SEO e idiomas continuam sendo servidos pelo próprio projeto. Uma implantação definitiva pode manter um Worker público para os dados ou migrar as tabelas de `drizzle/` para um Postgres compatível.
+A Edge Function encaminhará somente as rotas estruturadas que ainda dependem desse serviço. Enquetes, notícias, calendário, páginas, vídeos, SEO e idiomas continuam sendo servidos pelo próprio projeto. Uma implantação definitiva pode manter um Worker público para os dados ou migrar as tabelas de `drizzle/` para um Postgres compatível.
 
 ## Estrutura
 
