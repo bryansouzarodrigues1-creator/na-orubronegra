@@ -20,8 +20,19 @@ import santosThumb from './assets/santos-flamengo-2011.webp';
 const POLLS=['melhor-2026-09','saida-2026-09'];
 const OFFICIAL_TEAM='https://www.flamengo.com.br/futebol/elenco',OFFICIAL_HOME='https://www.flamengo.com.br/';
 const json=(data,status=200,headers={})=>Response.json(data,{status,headers:{'cache-control':'no-store',...headers}});
+const socialCard=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Nação Rubro-Negra">
+ <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050505"/><stop offset=".56" stop-color="#130006"/><stop offset="1" stop-color="#50000d"/></linearGradient><pattern id="stripes" width="86" height="86" patternUnits="userSpaceOnUse" patternTransform="rotate(-16)"><rect width="43" height="86" fill="#df001b" opacity=".08"/></pattern></defs>
+ <rect width="1200" height="630" fill="url(#bg)"/><rect width="1200" height="630" fill="url(#stripes)"/>
+ <circle cx="965" cy="310" r="230" fill="#df001b" opacity=".13"/><circle cx="965" cy="310" r="156" fill="none" stroke="#df001b" stroke-width="2" opacity=".45"/>
+ <rect x="78" y="78" width="88" height="88" rx="8" fill="#df001b"/><text x="122" y="135" text-anchor="middle" fill="#fff" font-size="31" font-family="Arial,sans-serif" font-weight="900">NRN</text>
+ <text x="78" y="252" fill="#ff263f" font-size="22" font-family="Arial,sans-serif" font-weight="800" letter-spacing="5">PORTAL INDEPENDENTE DA TORCIDA</text>
+ <text x="72" y="354" fill="#fff" font-size="92" font-family="Arial,sans-serif" font-weight="900" letter-spacing="-5">NAÇÃO</text>
+ <text x="72" y="447" fill="#fff" font-size="92" font-family="Arial,sans-serif" font-weight="900" letter-spacing="-5">RUBRO-NEGRA.</text>
+ <text x="78" y="514" fill="#c9c1c4" font-size="25" font-family="Arial,sans-serif">Notícias · jogos · escalações · palpites · votação · comunidade</text>
+ <g transform="translate(856 195)"><path d="M0 0h210v54c0 92-44 158-105 158S0 146 0 54z" fill="#df001b"/><path d="M20 62h170v24H20zm0 48h170v24H20z" fill="#090909"/><text x="105" y="181" text-anchor="middle" fill="#fff" font-size="42" font-family="Arial,sans-serif" font-weight="900">CRF</text></g>
+</svg>`;
 const page=upgradeHome(template.replace('/*CSS*/',()=>css+'\n'+additions).replace('/*JS*/',()=>client).replace('/*GOAL_LIVERPOOL*/',()=>liverpoolThumb).replace('/*GOAL_RIVER*/',()=>riverThumb).replace('/*GOAL_SANTOS*/',()=>santosThumb));
-async function fetchText(url,timeout=9000){const response=await fetch(url,{signal:AbortSignal.timeout(timeout)});if(!response.ok)throw new Error('Fonte HTTP '+response.status);return response.text();}
+async function fetchText(url,timeout=9000){const response=await fetch(url,{headers:{accept:'text/html,application/rss+xml,application/xml;q=0.9,*/*;q=0.7','user-agent':'Mozilla/5.0 (compatible; NacaoRubroNegra/1.0; +https://nacao-rubro-negra.netlify.app/)'},signal:AbortSignal.timeout(timeout)});if(!response.ok)throw new Error('Fonte HTTP '+response.status);return response.text();}
 let current={items:mergeNews([snapshot.news]),updatedAt:snapshot.updatedAt,stale:true,sources:[]},until=0,inflight;
 let roster={players:officialRoster.players,updatedAt:officialRoster.updatedAt,stale:true,source:officialRoster.source},rosterUntil=0;
 let matchCache={matches:scheduleSnapshot.matches,updatedAt:scheduleSnapshot.updatedAt,stale:true,source:scheduleSnapshot.source},matchUntil=0,matchInflight;
@@ -49,6 +60,7 @@ async function latestPost(db,table,id){const row=await db.prepare('SELECT create
 export default {async fetch(request,env,ctx){const u=new URL(request.url);
  const admin=await adminRoute(request,env,u);if(admin)return admin;
  if(u.pathname==='/media'&&request.method==='GET')return deliverImage(request);
+ if(u.pathname==='/social-card.svg'&&request.method==='GET')return new Response(socialCard,{headers:{'content-type':'image/svg+xml; charset=utf-8','cache-control':'public, max-age=86400, stale-while-revalidate=604800','x-content-type-options':'nosniff'}});
  if(u.pathname==='/favicon.ico')return Response.redirect('https://a.espncdn.com/i/teamlogos/soccer/500/819.png',302);
  if(u.pathname==='/manifest.webmanifest')return json({name:'Nação Rubro-Negra',short_name:'NRN',description:'Portal independente da torcida do Flamengo',start_url:'/',display:'standalone',background_color:'#080406',theme_color:'#df001b',lang:'pt-BR',icons:[{src:'https://a.espncdn.com/i/teamlogos/soccer/500/819.png',sizes:'500x500',type:'image/png',purpose:'any maskable'}]},200,{'content-type':'application/manifest+json','cache-control':'public, max-age=86400'});
  if(u.pathname==='/robots.txt')return new Response('User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /admin\nSitemap: '+ORIGIN+'/sitemap.xml',{headers:{'content-type':'text/plain; charset=utf-8','cache-control':'public, max-age=3600'}});
