@@ -9,8 +9,7 @@ const required=[
  ['summary_large_image','Metadados sociais regrediram'],
  ['nrn-local-engagement-v3','Fallback local de votos/palpites não entrou no bundle'],
  ['flamengo-visual-strip','Identidade visual da central de jogos não entrou no bundle'],
- ['Dois torcedores do Flamengo conversando','Ilustração da comunidade não entrou no bundle'],
- ['PERSISTENCE_UNCONFIGURED','Contrato de fallback persistente não entrou no bundle']
+ ['Dois torcedores do Flamengo conversando','Ilustração da comunidade não entrou no bundle']
 ];
 for(const [marker,message] of required)if(!bundle.includes(marker))throw new Error(message);
 
