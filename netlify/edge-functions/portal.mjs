@@ -78,7 +78,8 @@ async function nativePollRequest(request,context){
    if(!request.headers.get('content-type')?.startsWith('application/json'))return pollJSON({error:'Formato inválido.'},415);
    if(+(request.headers.get('content-length')||0)>2048)return pollJSON({error:'Pedido muito grande.'},413);
    const raw=await request.text();if(raw.length>2048)return pollJSON({error:'Pedido muito grande.'},413);
-   const {poll,player}=JSON.parse(raw),id=pollVoter(request),choice=String(player||'');
+   let body;try{body=JSON.parse(raw)}catch{return pollJSON({error:'JSON inválido.'},400)}
+   const {poll,player}=body,id=pollVoter(request),choice=String(player||'');
    if(!id)return pollJSON({error:'Abra os resultados antes de votar.'},400);
    if(!POLLS.includes(poll))return pollJSON({error:'Enquete inválida.'},400);
    if(!await allowedPollPlayer(request,context,poll,choice))return pollJSON({error:'Escolha um jogador do elenco.'},400);
