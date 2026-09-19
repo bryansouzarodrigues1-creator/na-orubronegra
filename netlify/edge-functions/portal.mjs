@@ -1,6 +1,6 @@
 import portal from '../../dist/server/index.js';
 
-const PRIMARY_ORIGIN='https://nacao-rubro-negra.bryansouzarodrigues0.chatgpt.site';
+const PRIMARY_ORIGIN='https://nacao-rubro-negra.netlify.app';
 const statefulPaths=new Set([
   '/api/groups',
   '/api/match-opinions',
