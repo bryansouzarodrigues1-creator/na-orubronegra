@@ -26,15 +26,19 @@ function securityHeaders(response){
 }
 
 function needsPersistentBackend(pathname){
- return statefulPaths.has(pathname)||pathname.startsWith('/api/admin/');
+ return statefulPaths.has(pathname)||pathname.startsWith('/api/community')||pathname.startsWith('/api/admin/');
+}
+
+function persistenceError(error,code,status=503){
+ return Response.json({error,code,localFallback:true},{status,headers:{'cache-control':'no-store'}});
 }
 
 async function proxyPersistentRequest(request,context){
  const configured=envValue(context,'PORTAL_BACKEND_ORIGIN');
- if(!configured)return Response.json({error:'Os recursos da comunidade aguardam a configuração do banco de dados neste ambiente.'},{status:503,headers:{'cache-control':'no-store'}});
+ if(!configured)return persistenceError('Os recursos interativos aguardam a configuração do banco de dados neste ambiente.','PERSISTENCE_UNCONFIGURED');
  let backend;
- try{backend=new URL(configured)}catch{return Response.json({error:'PORTAL_BACKEND_ORIGIN inválida.'},{status:503})}
- if(!['https:','http:'].includes(backend.protocol)||backend.username||backend.password)return Response.json({error:'PORTAL_BACKEND_ORIGIN precisa ser uma origem HTTP ou HTTPS válida.'},{status:503});
+ try{backend=new URL(configured)}catch{return persistenceError('PORTAL_BACKEND_ORIGIN inválida.','PERSISTENCE_CONFIG_INVALID')}
+ if(!['https:','http:'].includes(backend.protocol)||backend.username||backend.password)return persistenceError('PORTAL_BACKEND_ORIGIN precisa ser uma origem HTTP ou HTTPS válida.','PERSISTENCE_CONFIG_INVALID');
  const incoming=new URL(request.url),target=new URL(incoming.pathname+incoming.search,backend),headers=new Headers(request.headers);
  headers.delete('host');
  headers.delete('authorization');
@@ -45,7 +49,7 @@ async function proxyPersistentRequest(request,context){
  if(token)headers.set('authorization','Bearer '+token);
  const init={method:request.method,headers,redirect:'manual'};
  if(!['GET','HEAD'].includes(request.method))init.body=request.body;
- try{return await fetch(target,init)}catch{return Response.json({error:'O serviço de votos e comunidade está temporariamente indisponível.'},{status:502,headers:{'cache-control':'no-store'}})}
+ try{return await fetch(target,init)}catch{return persistenceError('O serviço de votos e comunidade está temporariamente indisponível.','PERSISTENCE_UPSTREAM_UNAVAILABLE',502)}
 }
 
 async function adaptOrigin(response,request){
