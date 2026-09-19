@@ -1,13 +1,12 @@
 import portal from '../../dist/server/index.js';
 
 const PRIMARY_ORIGIN='https://nacao-rubro-negra.netlify.app';
+const POLLS=['melhor-2026-09','saida-2026-09'];
 const statefulPaths=new Set([
   '/api/groups',
   '/api/match-opinions',
   '/api/match-prediction',
-  '/api/player-rating',
-  '/api/polls',
-  '/api/vote'
+  '/api/player-rating'
 ]);
 
 function envValue(context,name){
@@ -31,6 +30,68 @@ function needsPersistentBackend(pathname){
 
 function persistenceError(error,code,status=503){
  return Response.json({error,code,localFallback:true},{status,headers:{'cache-control':'no-store'}});
+}
+
+const pollVoter=request=>request.headers.get('cookie')?.match(/(?:^|;\s*)nrn_voter=([a-f0-9-]{36})(?:;|$)/)?.[1]||null;
+const pollCookie=id=>'nrn_voter='+id+'; Path=/; Max-Age=31536000; HttpOnly; Secure; SameSite=Lax';
+const pollJSON=(data,status=200,headers={})=>Response.json(data,{status,headers:{'cache-control':'no-store',...headers}});
+async function getPollStore(){
+ if(globalThis.__NRN_BLOB_STORE__)return globalThis.__NRN_BLOB_STORE__;
+ const {getStore}=await import('https://esm.sh/@netlify/blobs@11.1.0?target=deno');
+ return getStore({name:'nrn-polls',consistency:'strong'});
+}
+async function allowedPollPlayer(request,context,poll,player){
+ if(poll.startsWith('saida')&&player==='ninguem')return true;
+ if(!/^[a-z0-9-]{2,64}$/i.test(player))return false;
+ try{
+  const url=new URL('/api/players',request.url),execution={waitUntil(promise){context?.waitUntil?.(promise)}};
+  const response=await portal.fetch(new Request(url,{headers:{accept:'application/json'}}),{},execution);
+  if(!response.ok)return false;
+  const data=await response.json();
+  return (data.players||[]).some(row=>String(row.id)===player);
+ }catch{return false}
+}
+async function nativePollRequest(request,context){
+ const url=new URL(request.url);
+ try{
+  const store=await getPollStore();
+  if(url.pathname==='/api/polls'&&request.method==='GET'){
+   const id=pollVoter(request)||crypto.randomUUID();
+   const polls=await Promise.all(POLLS.map(async poll=>{
+    const [{blobs},mine]=await Promise.all([
+     store.list({prefix:'votes/'+poll+'/'}),
+     store.get('voters/'+poll+'/'+id,{consistency:'strong'})
+    ]);
+    const counts=new Map();
+    for(const blob of blobs||[]){
+     const parts=String(blob.key||'').split('/');
+     if(parts.length!==4||parts[0]!=='votes'||parts[1]!==poll)continue;
+     counts.set(parts[2],(counts.get(parts[2])||0)+1);
+    }
+    const options=[...counts].map(([player,votes])=>({player,votes})).sort((a,b)=>b.votes-a.votes||a.player.localeCompare(b.player));
+    return {id:poll,total:options.reduce((sum,row)=>sum+row.votes,0),options,mine:mine||null};
+   }));
+   return pollJSON({polls,storage:'netlify-blobs'},200,{'set-cookie':pollCookie(id)});
+  }
+  if(url.pathname==='/api/vote'&&request.method==='POST'){
+   if(request.headers.get('origin')!==url.origin)return pollJSON({error:'Origem inválida.'},403);
+   if(!request.headers.get('content-type')?.startsWith('application/json'))return pollJSON({error:'Formato inválido.'},415);
+   if(+(request.headers.get('content-length')||0)>2048)return pollJSON({error:'Pedido muito grande.'},413);
+   const raw=await request.text();if(raw.length>2048)return pollJSON({error:'Pedido muito grande.'},413);
+   const {poll,player}=JSON.parse(raw),id=pollVoter(request),choice=String(player||'');
+   if(!id)return pollJSON({error:'Abra os resultados antes de votar.'},400);
+   if(!POLLS.includes(poll))return pollJSON({error:'Enquete inválida.'},400);
+   if(!await allowedPollPlayer(request,context,poll,choice))return pollJSON({error:'Escolha um jogador do elenco.'},400);
+   const lockKey='voters/'+poll+'/'+id,lock=await store.set(lockKey,choice,{onlyIfNew:true}),saved=lock.modified?choice:await store.get(lockKey,{consistency:'strong'});
+   if(saved)await store.set('votes/'+poll+'/'+saved+'/'+id,'1',{onlyIfNew:true});
+   const accepted=Boolean(lock.modified);
+   return pollJSON({accepted,message:accepted?'Voto registrado no placar da Nação.':'Seu voto já foi registrado nesta enquete.',storage:'netlify-blobs'});
+  }
+  return pollJSON({error:'Método não permitido.'},405,{allow:url.pathname==='/api/polls'?'GET':'POST'});
+ }catch(error){
+  console.error('native_poll_storage',error?.message||error);
+  return persistenceError('O placar global está temporariamente indisponível. Seu voto pode continuar salvo neste aparelho.','POLL_STORE_UNAVAILABLE');
+ }
 }
 
 async function proxyPersistentRequest(request,context){
@@ -65,6 +126,7 @@ async function adaptOrigin(response,request){
 
 export default async function handler(request,context){
  const pathname=new URL(request.url).pathname;
+ if(pathname==='/api/polls'||pathname==='/api/vote')return securityHeaders(await nativePollRequest(request,context));
  if(needsPersistentBackend(pathname))return securityHeaders(await proxyPersistentRequest(request,context));
  const execution={waitUntil(promise){context?.waitUntil?.(promise)}};
  return securityHeaders(await adaptOrigin(await portal.fetch(request,{},execution),request));
