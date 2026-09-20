@@ -11,8 +11,8 @@ function logoFor(team){if(team?.logo)return team.logo;const name=fold(team?.name
 function withLogos(match){return {...match,home:{...match.home,logo:logoFor(match.home)},away:{...match.away,logo:logoFor(match.away)}};}
 async function mapLimit(items,limit,fn){const output=new Array(items.length);let cursor=0;async function worker(){while(cursor<items.length){const index=cursor++;output[index]=await fn(items[index],index);}}await Promise.all(Array.from({length:Math.min(limit,items.length)},worker));return output;}
 
-async function getJson(url){
- const response=await fetch(url,{headers:{accept:'application/json'},signal:AbortSignal.timeout(5500)});
+async function getJson(url,timeout=12000){
+ const response=await fetch(url,{headers:{accept:'application/json'},signal:AbortSignal.timeout(timeout)});
  if(!response.ok)throw new Error('Dados de jogo HTTP '+response.status);
  return response.json();
 }
@@ -37,6 +37,16 @@ function projections(comp){
  return {home:Math.round(home*10)/10,draw,away:Math.round(away*10)/10,source:'ESPN'};
 }
 
+function broadcastNames(...sources){
+ const names=sources.flatMap(source=>(source?.broadcasts||[]).flatMap(row=>Array.isArray(row.names)?row.names:row.name?[row.name]:[]));
+ return [...new Set(names.map(name=>String(name).trim()).filter(Boolean))];
+}
+
+function coverageLink(event){
+ const links=[...(event?.links||[]),...(event?.competitions?.[0]?.links||[])];
+ return links.find(link=>/summary|gamecast|match|partida/i.test(String(link.rel||link.text||'')))?.href||links[0]?.href||'';
+}
+
 function lineups(summary){
  const groups=Array.isArray(summary?.rosters)?summary.rosters:[];
  return groups.map(group=>({
@@ -48,7 +58,8 @@ function lineups(summary){
    name:row.athlete?.displayName||row.athlete?.shortName||'',
    number:row.jersey||'',
    position:row.position?.abbreviation||row.position?.displayName||'',
-   photo:row.athlete?.headshot?.href||''
+   photo:row.athlete?.headshot?.href||'',
+   fallbackPhoto:row.athlete?.jerseyImages?.find(image=>image.rel?.includes('default'))?.href||row.athlete?.jerseyImages?.[0]?.href||''
   }))
  })).filter(group=>group.starters.length);
 }
@@ -123,6 +134,8 @@ function eventMatch(event,league){
   home,
   away,
   probabilities:projections(comp),
+  broadcasts:broadcastNames(comp,event),
+  coverageUrl:coverageLink(event),
   dataSource:'ESPN'
  };
 }
@@ -176,23 +189,26 @@ async function enrich(match){
   const event=found.event;
   let squads=[],summary=null;
   try{
-   summary=await getJson('https://site.api.espn.com/apis/site/v2/sports/soccer/'+found.league+'/summary?event='+event.id);
+   summary=await getJson('https://site.api.espn.com/apis/site/v2/sports/soccer/'+found.league+'/summary?event='+event.id,12000);
    squads=lineups(summary);
   }catch{}
   const header=summary?.header||event,comp=event.competitions?.[0]||header.competitions?.[0]||{},rows=comp.competitors||[],home=competitor(rows,'home'),away=competitor(rows,'away');
-  const stateNow=event.status?.type?.state||header.status?.type?.state||match.state;
+  const eventDate=event.date||header.date||match.date,reportedState=header.status?.type?.state||event.status?.type?.state||match.state;
+  const stateNow=reportedState==='pre'&&Date.parse(eventDate)<Date.now()-21600000?'post':reportedState;
   const lineupStatus=squads.length?(stateNow==='post'?'historical':stateNow==='in'?'confirmed':'probable'):'unavailable';
   return withLogos({
    ...match,
    providerEventId:String(event.id),
    providerLeague:found.league,
-   date:event.date||header.date||match.date,
+   date:eventDate,
    state:stateNow,
-   status:event.status?.type?.shortDetail||header.status?.type?.shortDetail||match.status,
+   status:stateNow==='post'?'Encerrado':header.status?.type?.shortDetail||event.status?.type?.shortDetail||match.status,
    venue:comp.venue?.fullName||match.venue||match.status,
    home:home||match.home,
    away:away||match.away,
    probabilities:projections(comp)||match.probabilities,
+   broadcasts:broadcastNames(comp,event,header),
+   coverageUrl:coverageLink(event)||match.coverageUrl,
    events:matchEvents(summary),
    lineups:squads,
    lineupStatus,
@@ -214,5 +230,5 @@ function addProbableLineups(matches){
 export async function enrichMatches(rows){
  let extended=rows;
  try{extended=surrounding(rows,await schedule());}catch{}
- return addProbableLineups(await mapLimit(extended,2,enrich));
+ return addProbableLineups(await mapLimit(extended,4,enrich));
 }

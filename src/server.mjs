@@ -17,8 +17,15 @@ import {decoratePortalRoute,portalAlternates,portalPaths,portalRouteMeta,resolve
 import liverpoolThumb from './assets/flamengo-liverpool-1981.webp';
 import riverThumb from './assets/flamengo-river-2019.webp';
 import santosThumb from './assets/santos-flamengo-2011.webp';
+import categoryMatchday from './assets/category-matchday.webp';
+import categoryDiscussion from './assets/category-discussion.webp';
+import categoryVideos from './assets/category-videos.webp';
+import categoryVotes from './assets/category-votes.webp';
+import categoryGroups from './assets/category-groups.webp';
+import categoryHistory from './assets/category-history.webp';
 const POLLS=['melhor-2026-09','saida-2026-09'];
 const OFFICIAL_TEAM='https://www.flamengo.com.br/futebol/elenco',OFFICIAL_HOME='https://www.flamengo.com.br/';
+const FLATV_LIVE='https://www.youtube.com/@flamengo/live';
 const json=(data,status=200,headers={})=>Response.json(data,{status,headers:{'cache-control':'no-store',...headers}});
 const socialCard=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Nação Rubro-Negra">
  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050505"/><stop offset=".56" stop-color="#130006"/><stop offset="1" stop-color="#50000d"/></linearGradient><pattern id="stripes" width="86" height="86" patternUnits="userSpaceOnUse" patternTransform="rotate(-16)"><rect width="43" height="86" fill="#df001b" opacity=".08"/></pattern></defs>
@@ -31,17 +38,33 @@ const socialCard=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="6
  <text x="78" y="514" fill="#c9c1c4" font-size="25" font-family="Arial,sans-serif">Notícias · jogos · escalações · palpites · votação · comunidade</text>
  <g transform="translate(856 195)"><path d="M0 0h210v54c0 92-44 158-105 158S0 146 0 54z" fill="#df001b"/><path d="M20 62h170v24H20zm0 48h170v24H20z" fill="#090909"/><text x="105" y="181" text-anchor="middle" fill="#fff" font-size="42" font-family="Arial,sans-serif" font-weight="900">CRF</text></g>
 </svg>`;
-const page=upgradeHome(template.replace('/*CSS*/',()=>css+'\n'+additions).replace('/*JS*/',()=>client).replace('/*GOAL_LIVERPOOL*/',()=>liverpoolThumb).replace('/*GOAL_RIVER*/',()=>riverThumb).replace('/*GOAL_SANTOS*/',()=>santosThumb));
+const categoryAssets={
+ '/assets/category-matchday.webp':categoryMatchday,
+ '/assets/category-discussion.webp':categoryDiscussion,
+ '/assets/category-videos.webp':categoryVideos,
+ '/assets/category-votes.webp':categoryVotes,
+ '/assets/category-groups.webp':categoryGroups,
+ '/assets/category-history.webp':categoryHistory
+};
+const page=upgradeHome(template.replace('/*CSS*/',()=>css+'\n'+additions).replace('/*JS*/',()=>client).replace('/*GOAL_LIVERPOOL*/',()=>liverpoolThumb).replace('/*GOAL_RIVER*/',()=>riverThumb).replace('/*GOAL_SANTOS*/',()=>santosThumb),{
+ matchday:'/assets/category-matchday.webp',discussion:'/assets/category-discussion.webp',videos:'/assets/category-videos.webp',votes:'/assets/category-votes.webp',groups:'/assets/category-groups.webp',history:'/assets/category-history.webp'
+});
+function embeddedImage(dataUrl){const value=String(dataUrl),encoded=value.split(',')[1]||'',type=value.match(/^data:([^;,]+)/)?.[1]||'image/webp',binary=atob(encoded),bytes=Uint8Array.from(binary,char=>char.charCodeAt(0));return new Response(bytes,{headers:{'content-type':type,'cache-control':'public, max-age=31536000, immutable','x-content-type-options':'nosniff'}});}
 async function fetchText(url,timeout=9000){const response=await fetch(url,{headers:{accept:'text/html,application/rss+xml,application/xml;q=0.9,*/*;q=0.7','user-agent':'Mozilla/5.0 (compatible; NacaoRubroNegra/1.0; +https://nacao-rubro-negra.netlify.app/)'},signal:AbortSignal.timeout(timeout)});if(!response.ok)throw new Error('Fonte HTTP '+response.status);return response.text();}
 let current={items:mergeNews([snapshot.news]),updatedAt:snapshot.updatedAt,stale:true,sources:[]},until=0,inflight;
 let roster={players:officialRoster.players,updatedAt:officialRoster.updatedAt,stale:true,source:officialRoster.source},rosterUntil=0;
-let matchCache={matches:scheduleSnapshot.matches,updatedAt:scheduleSnapshot.updatedAt,stale:true,source:scheduleSnapshot.source},matchUntil=0,matchInflight;
+let matchCache={matches:lineupPhotos(scheduleSnapshot.matches,officialRoster.players),updatedAt:scheduleSnapshot.updatedAt,stale:true,source:scheduleSnapshot.source},matchUntil=0,matchInflight;
+let flatvCache={live:false,videoId:null,checkedAt:null,available:false},flatvUntil=0;
+function foldName(value){return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');}
+function lineupPhotos(matches,players){return matches.map(match=>({...match,lineups:(match.lineups||[]).map(group=>{const flamengo=String(group.teamId)==='819'||foldName(group.team).includes('flamengo');return {...group,starters:(group.starters||[]).map(player=>{if(player.photo)return player;const name=foldName(player.name),last=name.slice(-Math.min(8,name.length)),official=flamengo?players.find(row=>{const candidate=foldName(row.name);return String(row.id)===String(player.id)||candidate===name||candidate.includes(name)||name.includes(candidate)||(last.length>4&&candidate.endsWith(last));}):null;if(official?.photo)return {...player,id:official.id||player.id,photo:'/api/player-photo?id='+encodeURIComponent(official.id),photoSource:official.photoSource};return player.fallbackPhoto?{...player,photo:player.fallbackPhoto}:player;})};})}));}
+function liveVideoId(html){const marker=html.indexOf('"isLiveNow":true');if(marker<0)return null;const area=html.slice(Math.max(0,marker-12000),marker+2500),ids=[...area.matchAll(/"videoId":"([\w-]{11})"/g)];return ids.at(-1)?.[1]||null;}
+async function flatvLive(){if(Date.now()<flatvUntil)return flatvCache;try{const html=await fetchText(FLATV_LIVE,7000),videoId=liveVideoId(html);flatvCache={live:Boolean(videoId),videoId,checkedAt:new Date().toISOString(),available:true};flatvUntil=Date.now()+(videoId?30000:180000);}catch{flatvCache={...flatvCache,live:false,videoId:null,checkedAt:new Date().toISOString(),available:false};flatvUntil=Date.now()+60000;}return flatvCache;}
 async function matches(){
  if(Date.now()<matchUntil)return matchCache;
  if(matchInflight)return matchInflight;
  matchInflight=(async()=>{let rows=matchCache.matches,officialAvailable=false;
   try{const official=officialMatches(await fetchText(OFFICIAL_HOME,12000));if(official.length<3)throw new Error('Agenda incompleta');rows=official;officialAvailable=true;}catch{}
-  try{const enriched=await enrichMatches(rows);matchCache={matches:enriched,updatedAt:new Date().toISOString(),stale:!officialAvailable,source:officialAvailable?OFFICIAL_HOME:'ESPN'};const next=enriched.find(match=>match.state==='pre'&&Date.parse(match.date)>=Date.now()-7200000),near=next&&Math.abs(Date.parse(next.date)-Date.now())<7200000;matchUntil=Date.now()+(enriched.some(match=>match.state==='in')?12000:near?30000:300000);}
+  try{const enriched=lineupPhotos(await enrichMatches(rows),roster.players);matchCache={matches:enriched,updatedAt:new Date().toISOString(),stale:!officialAvailable,source:officialAvailable?OFFICIAL_HOME:'ESPN'};const next=enriched.find(match=>match.state==='pre'&&Date.parse(match.date)>=Date.now()-7200000),near=next&&Math.abs(Date.parse(next.date)-Date.now())<7200000;matchUntil=Date.now()+(enriched.some(match=>match.state==='in')?12000:near?30000:300000);}
   catch{matchCache={...matchCache,matches:matchCache.matches.map(match=>({...match,venue:match.venue||match.status})),stale:true};matchUntil=Date.now()+60000;}
   return matchCache;
  })().finally(()=>matchInflight=null);
@@ -59,6 +82,11 @@ const containsLink=value=>/(?:https?:\/\/|www\.|chat\.whatsapp\.com|t\.me\/)/i.t
 async function latestPost(db,table,id){const row=await db.prepare('SELECT created FROM '+table+' WHERE voter = ? ORDER BY created DESC LIMIT 1').bind(id).first();return Number(row?.created)||0;}
 export default {async fetch(request,env,ctx){const u=new URL(request.url);
  const admin=await adminRoute(request,env,u);if(admin)return admin;
+ if(categoryAssets[u.pathname])return embeddedImage(categoryAssets[u.pathname]);
+ if(u.pathname==='/api/player-photo'&&request.method==='GET'){
+  const id=String(u.searchParams.get('id')||''),player=roster.players.find(row=>String(row.id)===id)||officialRoster.players.find(row=>String(row.id)===id);
+  return player?.photo?.startsWith('data:image/')?embeddedImage(player.photo):new Response(null,{status:404,headers:{'cache-control':'public, max-age=300'}});
+ }
  if(u.pathname==='/media'&&request.method==='GET')return deliverImage(request);
  if(u.pathname==='/social-card.svg'&&request.method==='GET')return new Response(socialCard,{headers:{'content-type':'image/svg+xml; charset=utf-8','cache-control':'public, max-age=86400, stale-while-revalidate=604800','x-content-type-options':'nosniff'}});
  if(u.pathname==='/favicon.ico')return Response.redirect('https://a.espncdn.com/i/teamlogos/soccer/500/819.png',302);
@@ -78,7 +106,11 @@ export default {async fetch(request,env,ctx){const u=new URL(request.url);
  }
  if(u.pathname==='/sw.js')return new Response("self.addEventListener('install',()=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));self.addEventListener('notificationclick',e=>{e.notification.close();e.waitUntil(clients.matchAll({type:'window'}).then(ws=>{if(ws[0])return ws[0].focus();return clients.openWindow('/noticias')}))});",{headers:{'content-type':'text/javascript','cache-control':'no-cache'}});
  if(u.pathname==='/api/news'&&request.method==='GET')return json(await news());
- if(u.pathname==='/api/matches'&&request.method==='GET')return json(await matches());
+ if(u.pathname==='/api/matches'&&request.method==='GET'){
+  if(ctx?.waitUntil&&Date.now()>=matchUntil){ctx.waitUntil(matches());return json({...matchCache,refreshing:true});}
+  return json(await matches());
+ }
+ if(u.pathname==='/api/flamengo-live'&&request.method==='GET')return json(await flatvLive(),200,{'cache-control':'public, max-age=30, stale-while-revalidate=120'});
  if(u.pathname==='/api/match-opinions'&&request.method==='GET'){
   try{
    const db=getDb(env),id=voter(request)||crypto.randomUUID();

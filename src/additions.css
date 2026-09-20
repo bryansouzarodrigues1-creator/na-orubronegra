@@ -349,3 +349,16 @@ body[data-view] #historia,body[data-view] .curiosity,body[data-view] main>aside.
  .cv-bubble text:last-of-type{display:none}
 }
 @media(prefers-reduced-motion:reduce){.flamengo-visual,.vote-visual,.community-visual{transition:none!important}}
+
+/* === Capas editoriais e central de jogo verificada === */
+.portal-sector>img{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.88) contrast(1.08);transition:transform .55s ease,filter .35s ease}
+.portal-sector:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#080407f5 0%,#0d0509d9 42%,#0a030777 72%,#16000635 100%),linear-gradient(0deg,#100006e8 0%,transparent 56%);pointer-events:none}
+.portal-sector:before{z-index:2}.portal-sector>span,.portal-sector>strong,.portal-sector>small{position:relative;z-index:3;text-shadow:0 2px 18px #000}
+.portal-sector:hover>img{transform:scale(1.045);filter:saturate(1.08) contrast(1.1)}
+.portal-sector.sector-match{background:#4c0716}.portal-sector.sector-match:after{background:linear-gradient(90deg,#5f0016f2 0%,#260007d5 47%,#09030655 100%),linear-gradient(0deg,#100006d9,transparent 58%)}
+.where-to-watch{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:15px;margin:-2px 0 18px;padding:14px 16px;border:1px solid #732038;border-left:4px solid #ef183f;background:linear-gradient(110deg,#21070f,#0d0709);color:#fff}
+.where-to-watch>.eyebrow{padding-top:3px;white-space:nowrap}.where-to-watch>div{display:grid;gap:4px}.where-to-watch strong{font:900 18px/1.05 var(--heading);letter-spacing:.02em}.where-to-watch small{color:#cda0aa;font-size:11px;line-height:1.45}.where-to-watch a{width:max-content;margin-top:3px;color:#ff7990;font:800 11px var(--heading);letter-spacing:.04em}
+.flatv-poster{isolation:isolate;overflow:hidden}.flatv-poster img.flatv-cover{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center;filter:none;opacity:.72}.flatv-poster:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#080305f5,#25000da8 58%,#0502037a)}
+.flatv-poster-copy{display:grid;place-items:center;gap:9px;text-align:center}.flatv-poster-copy>span{font:900 27px/.9 var(--heading);letter-spacing:.035em}.flatv-poster-copy button{min-height:44px;padding:9px 15px;border:1px solid #fff;border-radius:999px;background:#e90936;color:#fff;font:900 12px var(--heading);letter-spacing:.05em}.flatv-poster-copy button:disabled{border-color:#e0a6b0;background:#1a0b10cc;color:#e0b2ba;opacity:1}.flatv-poster-copy small{max-width:280px;color:#f0cbd2;font-size:11px;text-align:center;text-shadow:0 2px 8px #000}
+.lineup-photo{object-fit:contain!important;object-position:center bottom!important;padding:2px 2px 0}
+@media(max-width:720px){.portal-sector:after{background:linear-gradient(0deg,#0b0306f7 0%,#0b0306bd 62%,#0b03064a 100%)}.portal-sector.sector-match:after{background:linear-gradient(90deg,#710019e8,#260008a8 60%,#08030558),linear-gradient(0deg,#160006e8,transparent 58%)}.portal-sector>img{object-position:center}.where-to-watch{grid-template-columns:1fr;gap:6px;padding:13px}.where-to-watch>.eyebrow{white-space:normal}.flatv-poster-copy>span{font-size:24px}}

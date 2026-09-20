@@ -1,145 +1,2650 @@
 {
   "source": "https://www.flamengo.com.br/",
-  "updatedAt": "2026-09-13T21:40:08.000Z",
+  "updatedAt": "2026-09-20T22:54:23.665Z",
   "matches": [
     {
-      "id": "2026-09-06-remo-flamengo",
-      "date": "2026-09-06T16:00:00-03:00",
+      "id": "espn-401841225",
+      "providerEventId": "401841225",
+      "providerLeague": "bra.1",
+      "date": "2026-09-06T19:00Z",
       "name": "Remo x Flamengo",
-      "competition": "Serie A",
+      "competition": "Brazilian Serie A",
       "status": "Encerrado",
       "state": "post",
+      "venue": "Mangueirão",
       "home": {
+        "id": "4936",
         "name": "Remo",
-        "short": "",
-        "logo": "",
+        "short": "REMO",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4936.png",
         "score": "0"
       },
       "away": {
+        "id": "819",
         "name": "Flamengo",
-        "short": "",
-        "logo": "",
+        "short": "FLA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png",
         "score": "1"
-      }
+      },
+      "probabilities": null,
+      "broadcasts": [],
+      "coverageUrl": "https://www.espn.com/soccer/match/_/gameId/401841225/flamengo-remo",
+      "dataSource": "ESPN",
+      "events": [
+        {
+          "id": "52052803",
+          "clock": "90'+5'",
+          "minute": 95,
+          "type": "update",
+          "text": "Edson Fernando (Remo) is shown the red card.",
+          "teamId": "4936",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52052798",
+          "clock": "90'+5'",
+          "minute": 95,
+          "type": "update",
+          "text": "Second Half ends, Remo 0, Flamengo 1.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+5'-Second Half ends, Remo 0, Flamengo 1.",
+          "clock": "90'+5'",
+          "minute": 95,
+          "type": "update",
+          "text": "Second Half ends, Remo 0, Flamengo 1.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+5'-Edson Fernando (Remo) is shown the red card.",
+          "clock": "90'+5'",
+          "minute": 95,
+          "type": "update",
+          "text": "Edson Fernando (Remo) is shown the red card.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+5'-Corner, Remo. Conceded by Emerson Royal.",
+          "clock": "90'+5'",
+          "minute": 95,
+          "type": "corner",
+          "text": "Corner, Remo. Conceded by Emerson Royal.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+4'-Corner, Remo. Conceded by Emerson Royal.",
+          "clock": "90'+4'",
+          "minute": 94,
+          "type": "corner",
+          "text": "Corner, Remo. Conceded by Emerson Royal.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'-Fourth official has announced 5 minutes of added time.",
+          "clock": "90'",
+          "minute": 90,
+          "type": "update",
+          "text": "Fourth official has announced 5 minutes of added time.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "89'-Foul by Joaquín Freitas (Flamengo).",
+          "clock": "89'",
+          "minute": 89,
+          "type": "foul",
+          "text": "Foul by Joaquín Freitas (Flamengo).",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "89'-Duplexe Tchamba (Remo) wins a free kick in the defensive half.",
+          "clock": "89'",
+          "minute": 89,
+          "type": "foul",
+          "text": "Duplexe Tchamba (Remo) wins a free kick in the defensive half.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "88'-Joaquín Freitas (Flamengo) wins a free kick on the left wing.",
+          "clock": "88'",
+          "minute": 88,
+          "type": "update",
+          "text": "Joaquín Freitas (Flamengo) wins a free kick on the left wing.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "88'-Foul by Edson Fernando (Remo).",
+          "clock": "88'",
+          "minute": 88,
+          "type": "foul",
+          "text": "Foul by Edson Fernando (Remo).",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "87'-Offside, Remo. Jája Silva is caught offside.",
+          "clock": "87'",
+          "minute": 87,
+          "type": "offside",
+          "text": "Offside, Remo. Jája Silva is caught offside.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "86'-Corner, Remo. Conceded by Erick Pulgar.",
+          "clock": "86'",
+          "minute": 86,
+          "type": "corner",
+          "text": "Corner, Remo. Conceded by Erick Pulgar.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "86'-Corner, Remo. Conceded by Bruno Henrique.",
+          "clock": "86'",
+          "minute": 86,
+          "type": "corner",
+          "text": "Corner, Remo. Conceded by Bruno Henrique.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "85'-Gabriel Poveda (Remo) wins a free kick on the left wing.",
+          "clock": "85'",
+          "minute": 85,
+          "type": "foul",
+          "text": "Gabriel Poveda (Remo) wins a free kick on the left wing.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "85'-Foul by Emerson Royal (Flamengo).",
+          "clock": "85'",
+          "minute": 85,
+          "type": "foul",
+          "text": "Foul by Emerson Royal (Flamengo).",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "85'-Attempt missed. Alef Manga (Remo) right footed shot from a difficult angle on the right misses to the left. Assisted by Gabriel Poveda.",
+          "clock": "85'",
+          "minute": 85,
+          "type": "shot_off",
+          "text": "Attempt missed. Alef Manga (Remo) right footed shot from a difficult angle on the right misses to the left. Assisted by Gabriel Poveda.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52051846",
+          "clock": "84'",
+          "minute": 84,
+          "type": "substitution",
+          "text": "Substitution, Remo. Edson Fernando replaces Antonio Galeano.",
+          "teamId": "4936",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "lineups": [
+        {
+          "teamId": "4936",
+          "team": "Remo",
+          "formation": "4-2-3-1",
+          "starters": [
+            {
+              "id": "206952",
+              "name": "Marcelo Rangel",
+              "number": "88",
+              "position": "G",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/206952/jersey.png?darkMode=false"
+            },
+            {
+              "id": "254447",
+              "name": "Duplexe Tchamba",
+              "number": "18",
+              "position": "CD-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/254447/jersey.png?darkMode=false"
+            },
+            {
+              "id": "157743",
+              "name": "Marllon",
+              "number": "13",
+              "position": "CD-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/157743/jersey.png?darkMode=false"
+            },
+            {
+              "id": "215815",
+              "name": "Marlon Lopes",
+              "number": "6",
+              "position": "LB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/215815/jersey.png?darkMode=false"
+            },
+            {
+              "id": "304826",
+              "name": "Marcelinho",
+              "number": "79",
+              "position": "RB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/304826/jersey.png?darkMode=false"
+            },
+            {
+              "id": "276661",
+              "name": "Zé Ricardo",
+              "number": "55",
+              "position": "AM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/276661/jersey.png?darkMode=false"
+            },
+            {
+              "id": "198362",
+              "name": "Patrick",
+              "number": "8",
+              "position": "LM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/198362/jersey.png?darkMode=false"
+            },
+            {
+              "id": "286532",
+              "name": "Leonel Picco",
+              "number": "14",
+              "position": "RM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/286532/jersey.png?darkMode=false"
+            },
+            {
+              "id": "235385",
+              "name": "Gabriel Taliari",
+              "number": "19",
+              "position": "F",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/235385/jersey.png?darkMode=false"
+            },
+            {
+              "id": "254464",
+              "name": "Antonio Galeano",
+              "number": "21",
+              "position": "AM-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/254464/jersey.png?darkMode=false"
+            },
+            {
+              "id": "186832",
+              "name": "Yago Pikachu",
+              "number": "22",
+              "position": "AM-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/186832/jersey.png?darkMode=false"
+            }
+          ]
+        },
+        {
+          "teamId": "819",
+          "team": "Flamengo",
+          "formation": "4-2-3-1",
+          "starters": [
+            {
+              "id": "215388",
+              "name": "Agustín Rossi",
+              "number": "1",
+              "position": "G",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/215388/jersey.png?darkMode=false"
+            },
+            {
+              "id": "145405",
+              "name": "Léo Pereira",
+              "number": "4",
+              "position": "CD-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/145405/jersey.png?darkMode=false"
+            },
+            {
+              "id": "252316",
+              "name": "Léo Ortiz",
+              "number": "3",
+              "position": "CD-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/252316/jersey.png?darkMode=false"
+            },
+            {
+              "id": "203077",
+              "name": "Ayrton Lucas",
+              "number": "6",
+              "position": "LB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/203077/jersey.png?darkMode=false"
+            },
+            {
+              "id": "246844",
+              "name": "Emerson Royal",
+              "number": "22",
+              "position": "RB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/246844/jersey.png?darkMode=false"
+            },
+            {
+              "id": "179767",
+              "name": "Giorgian de Arrascaeta",
+              "number": "10",
+              "position": "AM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/179767/jersey.png?darkMode=false"
+            },
+            {
+              "id": "234715",
+              "name": "Lucas Paquetá",
+              "number": "20",
+              "position": "LM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/234715/jersey.png?darkMode=false"
+            },
+            {
+              "id": "165778",
+              "name": "Jorginho",
+              "number": "21",
+              "position": "RM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/165778/jersey.png?darkMode=false"
+            },
+            {
+              "id": "235017",
+              "name": "Pedro",
+              "number": "9",
+              "position": "F",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/235017/jersey.png?darkMode=false"
+            },
+            {
+              "id": "253937",
+              "name": "Samuel Lino",
+              "number": "16",
+              "position": "AM-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/253937/jersey.png?darkMode=false"
+            },
+            {
+              "id": "208700",
+              "name": "Jorge Carrascal",
+              "number": "15",
+              "position": "AM-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841225/athletes/208700/jersey.png?darkMode=false"
+            }
+          ]
+        }
+      ],
+      "lineupStatus": "historical"
     },
     {
-      "id": "2026-09-10-independiente-valle-flamengo",
-      "date": "2026-09-10T21:30:00-03:00",
-      "name": "Independiente Valle x Flamengo",
+      "id": "espn-401912543",
+      "providerEventId": "401912543",
+      "providerLeague": "conmebol.libertadores",
+      "date": "2026-09-11T00:30Z",
+      "name": "Independiente del Valle x Flamengo",
       "competition": "CONMEBOL Libertadores",
       "status": "Encerrado",
       "state": "post",
+      "venue": "Estadio Olímpico Atahualpa",
       "home": {
-        "name": "Independiente Valle",
-        "short": "",
-        "logo": "",
+        "id": "17086",
+        "name": "Independiente del Valle",
+        "short": "IDV",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17086.png",
         "score": "0"
       },
       "away": {
+        "id": "819",
         "name": "Flamengo",
-        "short": "",
-        "logo": "",
+        "short": "FLA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png",
         "score": "2"
-      }
+      },
+      "probabilities": null,
+      "broadcasts": [],
+      "coverageUrl": "https://www.espn.com/soccer/match/_/gameId/401912543/flamengo-independiente-del-valle",
+      "dataSource": "ESPN",
+      "events": [
+        {
+          "id": "52193742",
+          "clock": "90'+5'",
+          "minute": 95,
+          "type": "update",
+          "text": "Second Half ends, Independiente del Valle 0, Flamengo 2.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+5'-Second Half ends, Independiente del Valle 0, Flamengo 2.",
+          "clock": "90'+5'",
+          "minute": 95,
+          "type": "update",
+          "text": "Second Half ends, Independiente del Valle 0, Flamengo 2.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52193560",
+          "clock": "90'+2'",
+          "minute": 92,
+          "type": "yellow_card",
+          "text": "Edwin Quintero (Independiente del Valle) is shown the yellow card for a bad foul.",
+          "teamId": "17086",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+2'-Guillermo Varela (Flamengo) wins a free kick in the defensive half.",
+          "clock": "90'+2'",
+          "minute": 92,
+          "type": "foul",
+          "text": "Guillermo Varela (Flamengo) wins a free kick in the defensive half.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+2'-Foul by Edwin Quintero (Independiente del Valle).",
+          "clock": "90'+2'",
+          "minute": 92,
+          "type": "foul",
+          "text": "Foul by Edwin Quintero (Independiente del Valle).",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+2'-Edwin Quintero (Independiente del Valle) is shown the yellow card for a bad foul.",
+          "clock": "90'+2'",
+          "minute": 92,
+          "type": "yellow_card",
+          "text": "Edwin Quintero (Independiente del Valle) is shown the yellow card for a bad foul.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52193442",
+          "clock": "90'",
+          "minute": 90,
+          "type": "substitution",
+          "text": "Substitution, Flamengo. Luiz Araújo replaces Samuel Lino.",
+          "teamId": "819",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'-Substitution, Flamengo. Luiz Araújo replaces Samuel Lino.",
+          "clock": "90'",
+          "minute": 90,
+          "type": "substitution",
+          "text": "Substitution, Flamengo. Luiz Araújo replaces Samuel Lino.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'-Fourth official has announced 5 minutes of added time.",
+          "clock": "90'",
+          "minute": 90,
+          "type": "update",
+          "text": "Fourth official has announced 5 minutes of added time.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'-Corner, Independiente del Valle. Conceded by Guillermo Varela.",
+          "clock": "90'",
+          "minute": 90,
+          "type": "corner",
+          "text": "Corner, Independiente del Valle. Conceded by Guillermo Varela.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52193144",
+          "clock": "86'",
+          "minute": 86,
+          "type": "substitution",
+          "text": "Substitution, Flamengo. Guillermo Varela replaces Ayrton Lucas.",
+          "teamId": "819",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "86'-Substitution, Flamengo. Guillermo Varela replaces Ayrton Lucas.",
+          "clock": "86'",
+          "minute": 86,
+          "type": "substitution",
+          "text": "Substitution, Flamengo. Guillermo Varela replaces Ayrton Lucas.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52193143",
+          "clock": "85'",
+          "minute": 85,
+          "type": "substitution",
+          "text": "Substitution, Flamengo. Pedro replaces Bruno Henrique.",
+          "teamId": "819",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52193142",
+          "clock": "85'",
+          "minute": 85,
+          "type": "substitution",
+          "text": "Substitution, Independiente del Valle. Youri Ochoa replaces Hugo Quintana.",
+          "teamId": "17086",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52193122",
+          "clock": "85'",
+          "minute": 85,
+          "type": "substitution",
+          "text": "Substitution, Independiente del Valle. Edwin Quintero replaces Arón Rodríguez.",
+          "teamId": "17086",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "85'-Substitution, Independiente del Valle. Youri Ochoa replaces Hugo Quintana.",
+          "clock": "85'",
+          "minute": 85,
+          "type": "substitution",
+          "text": "Substitution, Independiente del Valle. Youri Ochoa replaces Hugo Quintana.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "85'-Substitution, Independiente del Valle. Edwin Quintero replaces Arón Rodríguez.",
+          "clock": "85'",
+          "minute": 85,
+          "type": "substitution",
+          "text": "Substitution, Independiente del Valle. Edwin Quintero replaces Arón Rodríguez.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "85'-Substitution, Flamengo. Pedro replaces Bruno Henrique.",
+          "clock": "85'",
+          "minute": 85,
+          "type": "substitution",
+          "text": "Substitution, Flamengo. Pedro replaces Bruno Henrique.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "lineups": [
+        {
+          "teamId": "17086",
+          "team": "Independiente del Valle",
+          "formation": "4-1-4-1",
+          "starters": [
+            {
+              "id": "239985",
+              "name": "Aldair Quintana",
+              "number": "1",
+              "position": "G",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/239985/jersey.png?darkMode=false"
+            },
+            {
+              "id": "233381",
+              "name": "Richard Schunke",
+              "number": "5",
+              "position": "CD-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/233381/jersey.png?darkMode=false"
+            },
+            {
+              "id": "263082",
+              "name": "Mateo Carabajal",
+              "number": "14",
+              "position": "CD-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/263082/jersey.png?darkMode=false"
+            },
+            {
+              "id": "270829",
+              "name": "Jordy Alcívar",
+              "number": "6",
+              "position": "DM",
+              "photo": "https://a.espncdn.com/i/headshots/soccer/players/full/270829.png",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/270829/jersey.png?darkMode=false"
+            },
+            {
+              "id": "336201",
+              "name": "Layan Loor",
+              "number": "19",
+              "position": "LB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/336201/jersey.png?darkMode=false"
+            },
+            {
+              "id": "307609",
+              "name": "Daykol Romero",
+              "number": "13",
+              "position": "RB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/307609/jersey.png?darkMode=false"
+            },
+            {
+              "id": "159164",
+              "name": "Junior Sornoza",
+              "number": "10",
+              "position": "CM-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/159164/jersey.png?darkMode=false"
+            },
+            {
+              "id": "272903",
+              "name": "Hugo Quintana",
+              "number": "28",
+              "position": "CM-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/272903/jersey.png?darkMode=false"
+            },
+            {
+              "id": "339057",
+              "name": "Emerson Pata",
+              "number": "31",
+              "position": "LM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/339057/jersey.png?darkMode=false"
+            },
+            {
+              "id": "301538",
+              "name": "Arón Rodríguez",
+              "number": "17",
+              "position": "RM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/301538/jersey.png?darkMode=false"
+            },
+            {
+              "id": "80359",
+              "name": "Carlos González",
+              "number": "9",
+              "position": "F",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/80359/jersey.png?darkMode=false"
+            }
+          ]
+        },
+        {
+          "teamId": "819",
+          "team": "Flamengo",
+          "formation": "4-2-3-1",
+          "starters": [
+            {
+              "id": "215388",
+              "name": "Agustín Rossi",
+              "number": "1",
+              "position": "G",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/215388/jersey.png?darkMode=false"
+            },
+            {
+              "id": "145405",
+              "name": "Léo Pereira",
+              "number": "4",
+              "position": "CD-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/145405/jersey.png?darkMode=false"
+            },
+            {
+              "id": "252316",
+              "name": "Léo Ortiz",
+              "number": "3",
+              "position": "CD-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/252316/jersey.png?darkMode=false"
+            },
+            {
+              "id": "203077",
+              "name": "Ayrton Lucas",
+              "number": "6",
+              "position": "LB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/203077/jersey.png?darkMode=false"
+            },
+            {
+              "id": "246844",
+              "name": "Emerson Royal",
+              "number": "22",
+              "position": "RB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/246844/jersey.png?darkMode=false"
+            },
+            {
+              "id": "179767",
+              "name": "Giorgian de Arrascaeta",
+              "number": "10",
+              "position": "AM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/179767/jersey.png?darkMode=false"
+            },
+            {
+              "id": "165778",
+              "name": "Jorginho",
+              "number": "21",
+              "position": "LM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/165778/jersey.png?darkMode=false"
+            },
+            {
+              "id": "202533",
+              "name": "Erick Pulgar",
+              "number": "5",
+              "position": "RM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/202533/jersey.png?darkMode=false"
+            },
+            {
+              "id": "201683",
+              "name": "Bruno Henrique",
+              "number": "27",
+              "position": "F",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/201683/jersey.png?darkMode=false"
+            },
+            {
+              "id": "253937",
+              "name": "Samuel Lino",
+              "number": "16",
+              "position": "AM-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/253937/jersey.png?darkMode=false"
+            },
+            {
+              "id": "208700",
+              "name": "Jorge Carrascal",
+              "number": "15",
+              "position": "AM-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912543/athletes/208700/jersey.png?darkMode=false"
+            }
+          ]
+        }
+      ],
+      "lineupStatus": "historical"
     },
     {
-      "id": "2026-09-13-flamengo-corinthians",
-      "date": "2026-09-13T17:30:00-03:00",
+      "id": "espn-401841237",
+      "providerEventId": "401841237",
+      "providerLeague": "bra.1",
+      "date": "2026-09-13T20:30Z",
       "name": "Flamengo x Corinthians",
-      "competition": "Serie A",
-      "status": "Estadio Jornalista Mário Filho (Maracanã)",
-      "state": "pre",
+      "competition": "Brazilian Serie A",
+      "status": "Encerrado",
+      "state": "post",
+      "venue": "Estadio do Maracana",
       "home": {
+        "id": "819",
         "name": "Flamengo",
-        "short": "",
-        "logo": "",
-        "score": ""
+        "short": "FLA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png",
+        "score": "2"
       },
       "away": {
+        "id": "874",
         "name": "Corinthians",
-        "short": "",
-        "logo": "",
-        "score": ""
-      }
+        "short": "COR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+        "score": "1"
+      },
+      "probabilities": null,
+      "broadcasts": [],
+      "coverageUrl": "https://www.espn.com/soccer/match/_/gameId/401841237/corinthians-flamengo",
+      "dataSource": "ESPN",
+      "events": [
+        {
+          "id": "52399705",
+          "clock": "90'+8'",
+          "minute": 98,
+          "type": "update",
+          "text": "End Regular Time",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+8'-Second Half ends, Flamengo 2, Corinthians 1.",
+          "clock": "90'+8'",
+          "minute": 98,
+          "type": "update",
+          "text": "Second Half ends, Flamengo 2, Corinthians 1.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+8'-Foul by Rodrigo Garro (Corinthians).",
+          "clock": "90'+8'",
+          "minute": 98,
+          "type": "foul",
+          "text": "Foul by Rodrigo Garro (Corinthians).",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+8'-Bruno Henrique (Flamengo) wins a free kick in the defensive half.",
+          "clock": "90'+8'",
+          "minute": 98,
+          "type": "update",
+          "text": "Bruno Henrique (Flamengo) wins a free kick in the defensive half.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52399624",
+          "clock": "90'+7'",
+          "minute": 97,
+          "type": "yellow_card",
+          "text": "Jorginho (Flamengo) is shown the yellow card.",
+          "teamId": "819",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+7'-Jorginho (Flamengo) is shown the yellow card.",
+          "clock": "90'+7'",
+          "minute": 97,
+          "type": "yellow_card",
+          "text": "Jorginho (Flamengo) is shown the yellow card.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+6'-Corner, Flamengo. Conceded by Matheuzinho.",
+          "clock": "90'+6'",
+          "minute": 96,
+          "type": "corner",
+          "text": "Corner, Flamengo. Conceded by Matheuzinho.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52399508",
+          "clock": "90'+5'",
+          "minute": 95,
+          "type": "yellow_card",
+          "text": "Rodrigo Garro (Corinthians) is shown the yellow card.",
+          "teamId": "874",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+5'-Rodrigo Garro (Corinthians) is shown the yellow card.",
+          "clock": "90'+5'",
+          "minute": 95,
+          "type": "yellow_card",
+          "text": "Rodrigo Garro (Corinthians) is shown the yellow card.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+5'-Joaquín Freitas (Flamengo) wins a free kick in the defensive half.",
+          "clock": "90'+5'",
+          "minute": 95,
+          "type": "update",
+          "text": "Joaquín Freitas (Flamengo) wins a free kick in the defensive half.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+5'-Foul by Breno Bidon (Corinthians).",
+          "clock": "90'+5'",
+          "minute": 95,
+          "type": "foul",
+          "text": "Foul by Breno Bidon (Corinthians).",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+3'-Fourth official has announced 7 minutes of added time.",
+          "clock": "90'+3'",
+          "minute": 93,
+          "type": "update",
+          "text": "Fourth official has announced 7 minutes of added time.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52399033",
+          "clock": "90'+2'",
+          "minute": 92,
+          "type": "yellow_card",
+          "text": "Erick Pulgar (Flamengo) is shown the yellow card for a bad foul.",
+          "teamId": "819",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+2'-Kaio César (Corinthians) wins a free kick in the defensive half.",
+          "clock": "90'+2'",
+          "minute": 92,
+          "type": "foul",
+          "text": "Kaio César (Corinthians) wins a free kick in the defensive half.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+2'-Foul by Erick Pulgar (Flamengo).",
+          "clock": "90'+2'",
+          "minute": 92,
+          "type": "foul",
+          "text": "Foul by Erick Pulgar (Flamengo).",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+2'-Erick Pulgar (Flamengo) is shown the yellow card for a bad foul.",
+          "clock": "90'+2'",
+          "minute": 92,
+          "type": "yellow_card",
+          "text": "Erick Pulgar (Flamengo) is shown the yellow card for a bad foul.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52398695",
+          "clock": "89'",
+          "minute": 89,
+          "type": "corner",
+          "text": "Goal! Flamengo 2, Corinthians 1. Bruno Henrique (Flamengo) header from the centre of the box to the top left corner. Assisted by Joaquín Freitas with a cross.",
+          "teamId": "819",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "89'-Goal! Flamengo 2, Corinthians 1. Bruno Henrique (Flamengo) header from the centre of the box to the top left corner. Assisted by Joaquín Freitas with a cross.",
+          "clock": "89'",
+          "minute": 89,
+          "type": "corner",
+          "text": "Goal! Flamengo 2, Corinthians 1. Bruno Henrique (Flamengo) header from the centre of the box to the top left corner. Assisted by Joaquín Freitas with a cross.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "lineups": [
+        {
+          "teamId": "819",
+          "team": "Flamengo",
+          "formation": "4-2-3-1",
+          "starters": [
+            {
+              "id": "215388",
+              "name": "Agustín Rossi",
+              "number": "1",
+              "position": "G",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/215388/jersey.png?darkMode=false"
+            },
+            {
+              "id": "170369",
+              "name": "Danilo",
+              "number": "13",
+              "position": "CD-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/170369/jersey.png?darkMode=false"
+            },
+            {
+              "id": "252316",
+              "name": "Léo Ortiz",
+              "number": "3",
+              "position": "CD-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/252316/jersey.png?darkMode=false"
+            },
+            {
+              "id": "203077",
+              "name": "Ayrton Lucas",
+              "number": "6",
+              "position": "LB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/203077/jersey.png?darkMode=false"
+            },
+            {
+              "id": "188368",
+              "name": "Guillermo Varela",
+              "number": "2",
+              "position": "RB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/188368/jersey.png?darkMode=false"
+            },
+            {
+              "id": "179767",
+              "name": "Giorgian de Arrascaeta",
+              "number": "10",
+              "position": "AM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/179767/jersey.png?darkMode=false"
+            },
+            {
+              "id": "234715",
+              "name": "Lucas Paquetá",
+              "number": "11",
+              "position": "LM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/234715/jersey.png?darkMode=false"
+            },
+            {
+              "id": "202533",
+              "name": "Erick Pulgar",
+              "number": "5",
+              "position": "RM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/202533/jersey.png?darkMode=false"
+            },
+            {
+              "id": "235017",
+              "name": "Pedro",
+              "number": "9",
+              "position": "F",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/235017/jersey.png?darkMode=false"
+            },
+            {
+              "id": "253937",
+              "name": "Samuel Lino",
+              "number": "16",
+              "position": "AM-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/253937/jersey.png?darkMode=false"
+            },
+            {
+              "id": "277352",
+              "name": "Gonzalo Plata",
+              "number": "19",
+              "position": "AM-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/277352/jersey.png?darkMode=false"
+            }
+          ]
+        },
+        {
+          "teamId": "874",
+          "team": "Corinthians",
+          "formation": "4-4-2",
+          "starters": [
+            {
+              "id": "257051",
+              "name": "Hugo Souza",
+              "number": "1",
+              "position": "G",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/257051/jersey.png?darkMode=false"
+            },
+            {
+              "id": "421414",
+              "name": "Iago Machado",
+              "number": "55",
+              "position": "CD-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/421414/jersey.png?darkMode=false"
+            },
+            {
+              "id": "361471",
+              "name": "João Pedro",
+              "number": "4",
+              "position": "CD-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/361471/jersey.png?darkMode=false"
+            },
+            {
+              "id": "195756",
+              "name": "Fabrizio Angileri",
+              "number": "26",
+              "position": "LB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/195756/jersey.png?darkMode=false"
+            },
+            {
+              "id": "359849",
+              "name": "Pedro Milans",
+              "number": "20",
+              "position": "RB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/359849/jersey.png?darkMode=false"
+            },
+            {
+              "id": "236099",
+              "name": "Raniele",
+              "number": "14",
+              "position": "CM-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/236099/jersey.png?darkMode=false"
+            },
+            {
+              "id": "240557",
+              "name": "Charles",
+              "number": "35",
+              "position": "CM-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/240557/jersey.png?darkMode=false"
+            },
+            {
+              "id": "169136",
+              "name": "Jesse Lingard",
+              "number": "77",
+              "position": "LM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/169136/jersey.png?darkMode=false"
+            },
+            {
+              "id": "382944",
+              "name": "Dieguinho",
+              "number": "61",
+              "position": "RM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/382944/jersey.png?darkMode=false"
+            },
+            {
+              "id": "382959",
+              "name": "Gui Negão",
+              "number": "56",
+              "position": "CF-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/382959/jersey.png?darkMode=false"
+            },
+            {
+              "id": "216098",
+              "name": "Matheus Pereira",
+              "number": "23",
+              "position": "CF-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841237/athletes/216098/jersey.png?darkMode=false"
+            }
+          ]
+        }
+      ],
+      "lineupStatus": "historical"
     },
     {
       "id": "2026-09-17-flamengo-independiente-valle",
-      "date": "2026-09-17T21:30:00-03:00",
-      "name": "Flamengo x Independiente Valle",
+      "date": "2026-09-18T00:30Z",
+      "name": "Flamengo x Independiente del Valle",
       "competition": "CONMEBOL Libertadores",
-      "status": "Estadio Jornalista Mário Filho (Maracanã)",
-      "state": "pre",
+      "status": "Encerrado",
+      "state": "post",
       "home": {
+        "id": "819",
         "name": "Flamengo",
-        "short": "",
-        "logo": "",
-        "score": ""
+        "short": "FLA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png",
+        "score": "1"
       },
       "away": {
-        "name": "Independiente Valle",
-        "short": "",
-        "logo": "",
-        "score": ""
-      }
+        "id": "17086",
+        "name": "Independiente del Valle",
+        "short": "IDV",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17086.png",
+        "score": "1"
+      },
+      "providerEventId": "401912526",
+      "providerLeague": "conmebol.libertadores",
+      "venue": "Estadio do Maracana",
+      "probabilities": null,
+      "broadcasts": [],
+      "coverageUrl": "https://www.espn.com/soccer/match/_/gameId/401912526/independiente-del-valle-flamengo",
+      "dataSource": "ESPN",
+      "events": [
+        {
+          "id": "52556730",
+          "clock": "90'+7'",
+          "minute": 97,
+          "type": "update",
+          "text": "End Regular Time",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+7'-Second Half ends, Flamengo 1, Independiente del Valle 1.",
+          "clock": "90'+7'",
+          "minute": 97,
+          "type": "update",
+          "text": "Second Half ends, Flamengo 1, Independiente del Valle 1.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+6'-Attempt saved. Júnior Sornoza (Independiente del Valle) right footed shot from outside the box is saved in the bottom right corner by Agustín Rossi (Flamengo). Assisted by Ronald Briones.",
+          "clock": "90'+6'",
+          "minute": 96,
+          "type": "corner",
+          "text": "Attempt saved. Júnior Sornoza (Independiente del Valle) right footed shot from outside the box is saved in the bottom right corner by Agustín Rossi (Flamengo). Assisted by Ronald Briones.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+3'-Attempt saved. Mateo Carabajal (Independiente del Valle) header from the centre of the box is saved in the bottom left corner by Agustín Rossi (Flamengo). Assisted by Daykol Romero with a cross.",
+          "clock": "90'+3'",
+          "minute": 93,
+          "type": "corner",
+          "text": "Attempt saved. Mateo Carabajal (Independiente del Valle) header from the centre of the box is saved in the bottom left corner by Agustín Rossi (Flamengo). Assisted by Daykol Romero with a cross.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52556654",
+          "clock": "90'+2'",
+          "minute": 92,
+          "type": "yellow_card",
+          "text": "Nicolás de la Cruz (Flamengo) is shown the yellow card.",
+          "teamId": "819",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+2'-Nicolás de la Cruz (Flamengo) is shown the yellow card.",
+          "clock": "90'+2'",
+          "minute": 92,
+          "type": "yellow_card",
+          "text": "Nicolás de la Cruz (Flamengo) is shown the yellow card.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52556623",
+          "clock": "90'+1'",
+          "minute": 91,
+          "type": "substitution",
+          "text": "Substitution, Flamengo. Guillermo Varela replaces Samuel Lino.",
+          "teamId": "819",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+1'-Substitution, Flamengo. Guillermo Varela replaces Samuel Lino.",
+          "clock": "90'+1'",
+          "minute": 91,
+          "type": "substitution",
+          "text": "Substitution, Flamengo. Guillermo Varela replaces Samuel Lino.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "90'+1'-Fourth official has announced 6 minutes of added time.",
+          "clock": "90'+1'",
+          "minute": 91,
+          "type": "update",
+          "text": "Fourth official has announced 6 minutes of added time.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52556600",
+          "clock": "89'",
+          "minute": 89,
+          "type": "substitution",
+          "text": "Substitution, Independiente del Valle. Steven Góngora replaces Emerson Pata.",
+          "teamId": "17086",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "89'-Substitution, Independiente del Valle. Steven Góngora replaces Emerson Pata.",
+          "clock": "89'",
+          "minute": 89,
+          "type": "substitution",
+          "text": "Substitution, Independiente del Valle. Steven Góngora replaces Emerson Pata.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "89'-Attempt missed. Mateo Carabajal (Independiente del Valle) header from the centre of the box is close, but misses to the right. Assisted by Júnior Sornoza with a cross following a corner.",
+          "clock": "89'",
+          "minute": 89,
+          "type": "corner",
+          "text": "Attempt missed. Mateo Carabajal (Independiente del Valle) header from the centre of the box is close, but misses to the right. Assisted by Júnior Sornoza with a cross following a corner.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "88'-Corner, Independiente del Valle. Conceded by Ayrton Lucas.",
+          "clock": "88'",
+          "minute": 88,
+          "type": "corner",
+          "text": "Corner, Independiente del Valle. Conceded by Ayrton Lucas.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "86'-Jordy Alcívar (Independiente del Valle) wins a free kick in the attacking half.",
+          "clock": "86'",
+          "minute": 86,
+          "type": "foul",
+          "text": "Jordy Alcívar (Independiente del Valle) wins a free kick in the attacking half.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "86'-Foul by Saúl (Flamengo).",
+          "clock": "86'",
+          "minute": 86,
+          "type": "foul",
+          "text": "Foul by Saúl (Flamengo).",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52556382",
+          "clock": "83'",
+          "minute": 83,
+          "type": "corner",
+          "text": "Goal! Flamengo 1, Independiente del Valle 1. Giorgian de Arrascaeta (Flamengo) header from the right side of the six yard box to the bottom right corner. Assisted by Agustín Rossi.",
+          "teamId": "819",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52556365",
+          "clock": "83'",
+          "minute": 83,
+          "type": "substitution",
+          "text": "Substitution, Independiente del Valle. Ronald Briones replaces Matías Perelló.",
+          "teamId": "17086",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "83'-Substitution, Independiente del Valle. Ronald Briones replaces Matías Perelló.",
+          "clock": "83'",
+          "minute": 83,
+          "type": "substitution",
+          "text": "Substitution, Independiente del Valle. Ronald Briones replaces Matías Perelló.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "lineups": [
+        {
+          "teamId": "819",
+          "team": "Flamengo",
+          "formation": "4-2-3-1",
+          "starters": [
+            {
+              "id": "215388",
+              "name": "Agustín Rossi",
+              "number": "1",
+              "position": "G",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/215388/jersey.png?darkMode=false"
+            },
+            {
+              "id": "145405",
+              "name": "Léo Pereira",
+              "number": "4",
+              "position": "CD-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/145405/jersey.png?darkMode=false"
+            },
+            {
+              "id": "252316",
+              "name": "Léo Ortiz",
+              "number": "3",
+              "position": "CD-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/252316/jersey.png?darkMode=false"
+            },
+            {
+              "id": "203077",
+              "name": "Ayrton Lucas",
+              "number": "6",
+              "position": "LB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/203077/jersey.png?darkMode=false"
+            },
+            {
+              "id": "246844",
+              "name": "Emerson Royal",
+              "number": "22",
+              "position": "RB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/246844/jersey.png?darkMode=false"
+            },
+            {
+              "id": "234715",
+              "name": "Lucas Paquetá",
+              "number": "20",
+              "position": "AM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/234715/jersey.png?darkMode=false"
+            },
+            {
+              "id": "165778",
+              "name": "Jorginho",
+              "number": "21",
+              "position": "LM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/165778/jersey.png?darkMode=false"
+            },
+            {
+              "id": "202533",
+              "name": "Erick Pulgar",
+              "number": "5",
+              "position": "RM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/202533/jersey.png?darkMode=false"
+            },
+            {
+              "id": "201683",
+              "name": "Bruno Henrique",
+              "number": "27",
+              "position": "F",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/201683/jersey.png?darkMode=false"
+            },
+            {
+              "id": "253937",
+              "name": "Samuel Lino",
+              "number": "16",
+              "position": "AM-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/253937/jersey.png?darkMode=false"
+            },
+            {
+              "id": "208700",
+              "name": "Jorge Carrascal",
+              "number": "15",
+              "position": "AM-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/208700/jersey.png?darkMode=false"
+            }
+          ]
+        },
+        {
+          "teamId": "17086",
+          "team": "Independiente del Valle",
+          "formation": "4-1-4-1",
+          "starters": [
+            {
+              "id": "239985",
+              "name": "Aldair Quintana",
+              "number": "1",
+              "position": "G",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/239985/jersey.png?darkMode=false"
+            },
+            {
+              "id": "233381",
+              "name": "Richard Schunke",
+              "number": "5",
+              "position": "CD-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/233381/jersey.png?darkMode=false"
+            },
+            {
+              "id": "263082",
+              "name": "Mateo Carabajal",
+              "number": "14",
+              "position": "CD-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/263082/jersey.png?darkMode=false"
+            },
+            {
+              "id": "270829",
+              "name": "Jordy Alcívar",
+              "number": "6",
+              "position": "DM",
+              "photo": "https://a.espncdn.com/i/headshots/soccer/players/full/270829.png",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/270829/jersey.png?darkMode=false"
+            },
+            {
+              "id": "336201",
+              "name": "Layan Loor",
+              "number": "19",
+              "position": "LB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/336201/jersey.png?darkMode=false"
+            },
+            {
+              "id": "307609",
+              "name": "Daykol Romero",
+              "number": "13",
+              "position": "RB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/307609/jersey.png?darkMode=false"
+            },
+            {
+              "id": "159164",
+              "name": "Junior Sornoza",
+              "number": "10",
+              "position": "CM-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/159164/jersey.png?darkMode=false"
+            },
+            {
+              "id": "272903",
+              "name": "Hugo Quintana",
+              "number": "28",
+              "position": "CM-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/272903/jersey.png?darkMode=false"
+            },
+            {
+              "id": "339057",
+              "name": "Emerson Pata",
+              "number": "31",
+              "position": "LM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/339057/jersey.png?darkMode=false"
+            },
+            {
+              "id": "318182",
+              "name": "Matías Perello",
+              "number": "11",
+              "position": "RM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/318182/jersey.png?darkMode=false"
+            },
+            {
+              "id": "252702",
+              "name": "Djorkaeff Reasco",
+              "number": "99",
+              "position": "F",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/252702/jersey.png?darkMode=false"
+            }
+          ]
+        }
+      ],
+      "lineupStatus": "historical"
     },
     {
       "id": "2026-09-20-flamengo-rb-bragantino",
-      "date": "2026-09-20T18:30:00-03:00",
+      "date": "2026-09-20T21:30Z",
       "name": "Flamengo x RB Bragantino",
       "competition": "Serie A",
-      "status": "Estadio Jornalista Mário Filho (Maracanã)",
-      "state": "pre",
+      "status": "62'",
+      "state": "in",
       "home": {
+        "id": "819",
         "name": "Flamengo",
-        "short": "",
-        "logo": "",
-        "score": ""
+        "short": "FLA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png",
+        "score": "1"
       },
       "away": {
-        "name": "RB Bragantino",
-        "short": "",
-        "logo": "",
-        "score": ""
-      }
+        "id": "6079",
+        "name": "Red Bull Bragantino",
+        "short": "BRA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png",
+        "score": "0"
+      },
+      "providerEventId": "401841241",
+      "providerLeague": "bra.1",
+      "venue": "Estadio do Maracana",
+      "broadcasts": [],
+      "coverageUrl": "https://www.espn.com/soccer/match/_/gameId/401841241",
+      "events": [
+        {
+          "id": "52769464",
+          "clock": "58'",
+          "minute": 58,
+          "type": "substitution",
+          "text": "Substitution, RB Bragantino. José Herrera replaces Vanderlan.",
+          "teamId": "6079",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "58'-Substitution, RB Bragantino. José Herrera replaces Vanderlan.",
+          "clock": "58'",
+          "minute": 58,
+          "type": "substitution",
+          "text": "Substitution, RB Bragantino. José Herrera replaces Vanderlan.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "55'-Foul by Henry Mosquera (RB Bragantino).",
+          "clock": "55'",
+          "minute": 55,
+          "type": "foul",
+          "text": "Foul by Henry Mosquera (RB Bragantino).",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "55'-Alex Sandro (Flamengo) wins a free kick on the left wing.",
+          "clock": "55'",
+          "minute": 55,
+          "type": "update",
+          "text": "Alex Sandro (Flamengo) wins a free kick on the left wing.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "53'-Attempt saved. Jorge Carrascal (Flamengo) right footed shot from the centre of the box is saved in the bottom right corner by Tiago Volpi (RB Bragantino). Assisted by Gonzalo Plata with a headed pass.",
+          "clock": "53'",
+          "minute": 53,
+          "type": "corner",
+          "text": "Attempt saved. Jorge Carrascal (Flamengo) right footed shot from the centre of the box is saved in the bottom right corner by Tiago Volpi (RB Bragantino). Assisted by Gonzalo Plata with a headed pass.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "53'-Attempt missed. Giorgian de Arrascaeta (Flamengo) left footed shot from the centre of the box is close, but misses to the right following a fast break.",
+          "clock": "53'",
+          "minute": 53,
+          "type": "shot_off",
+          "text": "Attempt missed. Giorgian de Arrascaeta (Flamengo) left footed shot from the centre of the box is close, but misses to the right following a fast break.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52'-Attempt blocked. Vanderlan (RB Bragantino) left footed shot from outside the box is blocked.",
+          "clock": "52'",
+          "minute": 52,
+          "type": "shot_blocked",
+          "text": "Attempt blocked. Vanderlan (RB Bragantino) left footed shot from outside the box is blocked.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52'-Attempt blocked. Agustín Sant'Anna (RB Bragantino) right footed shot from outside the box is blocked.",
+          "clock": "52'",
+          "minute": 52,
+          "type": "shot_blocked",
+          "text": "Attempt blocked. Agustín Sant'Anna (RB Bragantino) right footed shot from outside the box is blocked.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52768895",
+          "clock": "51'",
+          "minute": 51,
+          "type": "yellow_card",
+          "text": "Guillermo Varela (Flamengo) is shown the yellow card for a bad foul.",
+          "teamId": "819",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "51'-Lucas Barbosa (RB Bragantino) wins a free kick in the attacking half.",
+          "clock": "51'",
+          "minute": 51,
+          "type": "foul",
+          "text": "Lucas Barbosa (RB Bragantino) wins a free kick in the attacking half.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "51'-Guillermo Varela (Flamengo) is shown the yellow card for a bad foul.",
+          "clock": "51'",
+          "minute": 51,
+          "type": "yellow_card",
+          "text": "Guillermo Varela (Flamengo) is shown the yellow card for a bad foul.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "51'-Foul by Guillermo Varela (Flamengo).",
+          "clock": "51'",
+          "minute": 51,
+          "type": "foul",
+          "text": "Foul by Guillermo Varela (Flamengo).",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "52767609",
+          "clock": "45'+5'",
+          "minute": 50,
+          "type": "update",
+          "text": "First Half ends, Flamengo 1, RB Bragantino 0.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "45'+5'-First Half ends, Flamengo 1, RB Bragantino 0.",
+          "clock": "45'+5'",
+          "minute": 50,
+          "type": "update",
+          "text": "First Half ends, Flamengo 1, RB Bragantino 0.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "48'-Corner, RB Bragantino. Conceded by Léo Ortiz.",
+          "clock": "48'",
+          "minute": 48,
+          "type": "corner",
+          "text": "Corner, RB Bragantino. Conceded by Léo Ortiz.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "45'+3'-Attempt missed. Jorge Carrascal (Flamengo) right footed shot from the left side of the box misses to the left. Assisted by Giorgian de Arrascaeta.",
+          "clock": "45'+3'",
+          "minute": 48,
+          "type": "shot_off",
+          "text": "Attempt missed. Jorge Carrascal (Flamengo) right footed shot from the left side of the box misses to the left. Assisted by Giorgian de Arrascaeta.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "45'+2'-Jorge Carrascal (Flamengo) wins a free kick in the defensive half.",
+          "clock": "45'+2'",
+          "minute": 47,
+          "type": "update",
+          "text": "Jorge Carrascal (Flamengo) wins a free kick in the defensive half.",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "id": "45'+2'-Foul by Fabinho (RB Bragantino).",
+          "clock": "45'+2'",
+          "minute": 47,
+          "type": "foul",
+          "text": "Foul by Fabinho (RB Bragantino).",
+          "teamId": "",
+          "homeScore": 0,
+          "awayScore": 0,
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "lineups": [
+        {
+          "teamId": "819",
+          "team": "Flamengo",
+          "formation": "4-2-3-1",
+          "starters": [
+            {
+              "id": "215388",
+              "name": "Agustín Rossi",
+              "number": "1",
+              "position": "G",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/215388/jersey.png?darkMode=false"
+            },
+            {
+              "id": "145405",
+              "name": "Léo Pereira",
+              "number": "4",
+              "position": "CD-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/145405/jersey.png?darkMode=false"
+            },
+            {
+              "id": "252316",
+              "name": "Léo Ortiz",
+              "number": "3",
+              "position": "CD-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/252316/jersey.png?darkMode=false"
+            },
+            {
+              "id": "203077",
+              "name": "Ayrton Lucas",
+              "number": "6",
+              "position": "LB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/203077/jersey.png?darkMode=false"
+            },
+            {
+              "id": "188368",
+              "name": "Guillermo Varela",
+              "number": "2",
+              "position": "RB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/188368/jersey.png?darkMode=false"
+            },
+            {
+              "id": "179767",
+              "name": "Giorgian de Arrascaeta",
+              "number": "10",
+              "position": "AM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/179767/jersey.png?darkMode=false"
+            },
+            {
+              "id": "172269",
+              "name": "Saúl Ñíguez",
+              "number": "8",
+              "position": "LM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/172269/jersey.png?darkMode=false"
+            },
+            {
+              "id": "165778",
+              "name": "Jorginho",
+              "number": "21",
+              "position": "RM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/165778/jersey.png?darkMode=false"
+            },
+            {
+              "id": "235017",
+              "name": "Pedro",
+              "number": "9",
+              "position": "F",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/235017/jersey.png?darkMode=false"
+            },
+            {
+              "id": "208700",
+              "name": "Jorge Carrascal",
+              "number": "15",
+              "position": "AM-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/208700/jersey.png?darkMode=false"
+            },
+            {
+              "id": "277352",
+              "name": "Gonzalo Plata",
+              "number": "19",
+              "position": "AM-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/277352/jersey.png?darkMode=false"
+            }
+          ]
+        },
+        {
+          "teamId": "6079",
+          "team": "Red Bull Bragantino",
+          "formation": "4-2-3-1",
+          "starters": [
+            {
+              "id": "145092",
+              "name": "Tiago Volpi",
+              "number": "18",
+              "position": "G",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/145092/jersey.png?darkMode=false"
+            },
+            {
+              "id": "302225",
+              "name": "Guzmán Rodríguez",
+              "number": "2",
+              "position": "CD-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/302225/jersey.png?darkMode=false"
+            },
+            {
+              "id": "334375",
+              "name": "Gustavo Marques",
+              "number": "16",
+              "position": "CD-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/334375/jersey.png?darkMode=false"
+            },
+            {
+              "id": "307933",
+              "name": "Vanderlan",
+              "number": "12",
+              "position": "LB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/307933/jersey.png?darkMode=false"
+            },
+            {
+              "id": "253486",
+              "name": "Agustín Sant'Anna",
+              "number": "23",
+              "position": "RB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/253486/jersey.png?darkMode=false"
+            },
+            {
+              "id": "339001",
+              "name": "Rodriguinho",
+              "number": "20",
+              "position": "AM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/339001/jersey.png?darkMode=false"
+            },
+            {
+              "id": "307934",
+              "name": "Fabinho",
+              "number": "5",
+              "position": "LM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/307934/jersey.png?darkMode=false"
+            },
+            {
+              "id": "279941",
+              "name": "Ramires",
+              "number": "7",
+              "position": "RM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/279941/jersey.png?darkMode=false"
+            },
+            {
+              "id": "287035",
+              "name": "Isidro Pitta",
+              "number": "9",
+              "position": "F",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/287035/jersey.png?darkMode=false"
+            },
+            {
+              "id": "267902",
+              "name": "Fernando",
+              "number": "11",
+              "position": "AM-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/267902/jersey.png?darkMode=false"
+            },
+            {
+              "id": "248584",
+              "name": "Lucas Barbosa",
+              "number": "21",
+              "position": "AM-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/bra.1/events/401841241/athletes/248584/jersey.png?darkMode=false"
+            }
+          ]
+        }
+      ],
+      "lineupStatus": "confirmed",
+      "dataSource": "ESPN"
     },
     {
       "id": "2026-10-08-santos-flamengo",
-      "date": "2026-10-08T19:30:00-03:00",
+      "date": "2026-10-08T22:30Z",
       "name": "Santos x Flamengo",
       "competition": "Serie A",
-      "status": "Estádio Urbano Caldeira",
+      "status": "Scheduled",
       "state": "pre",
       "home": {
+        "id": "2674",
         "name": "Santos",
-        "short": "",
-        "logo": "",
-        "score": ""
+        "short": "SAN",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png",
+        "score": "0"
       },
       "away": {
+        "id": "819",
         "name": "Flamengo",
-        "short": "",
-        "logo": "",
-        "score": ""
+        "short": "FLA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png",
+        "score": "0"
+      },
+      "providerEventId": "401841251",
+      "providerLeague": "bra.1",
+      "venue": "Estádio Vila Belmiro (Urbano Caldeira)",
+      "broadcasts": [],
+      "coverageUrl": "https://www.espn.com/soccer/match/_/gameId/401841251/flamengo-santos",
+      "events": [],
+      "lineups": [
+        {
+          "teamId": "819",
+          "team": "Flamengo",
+          "formation": "4-2-3-1",
+          "starters": [
+            {
+              "id": "215388",
+              "name": "Agustín Rossi",
+              "number": "1",
+              "position": "G",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/215388/jersey.png?darkMode=false"
+            },
+            {
+              "id": "145405",
+              "name": "Léo Pereira",
+              "number": "4",
+              "position": "CD-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/145405/jersey.png?darkMode=false"
+            },
+            {
+              "id": "252316",
+              "name": "Léo Ortiz",
+              "number": "3",
+              "position": "CD-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/252316/jersey.png?darkMode=false"
+            },
+            {
+              "id": "203077",
+              "name": "Ayrton Lucas",
+              "number": "6",
+              "position": "LB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/203077/jersey.png?darkMode=false"
+            },
+            {
+              "id": "246844",
+              "name": "Emerson Royal",
+              "number": "22",
+              "position": "RB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/246844/jersey.png?darkMode=false"
+            },
+            {
+              "id": "234715",
+              "name": "Lucas Paquetá",
+              "number": "20",
+              "position": "AM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/234715/jersey.png?darkMode=false"
+            },
+            {
+              "id": "165778",
+              "name": "Jorginho",
+              "number": "21",
+              "position": "LM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/165778/jersey.png?darkMode=false"
+            },
+            {
+              "id": "202533",
+              "name": "Erick Pulgar",
+              "number": "5",
+              "position": "RM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/202533/jersey.png?darkMode=false"
+            },
+            {
+              "id": "201683",
+              "name": "Bruno Henrique",
+              "number": "27",
+              "position": "F",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/201683/jersey.png?darkMode=false"
+            },
+            {
+              "id": "253937",
+              "name": "Samuel Lino",
+              "number": "16",
+              "position": "AM-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/253937/jersey.png?darkMode=false"
+            },
+            {
+              "id": "208700",
+              "name": "Jorge Carrascal",
+              "number": "15",
+              "position": "AM-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/208700/jersey.png?darkMode=false"
+            }
+          ],
+          "probable": true
+        }
+      ],
+      "lineupStatus": "probable",
+      "dataSource": "ESPN",
+      "lineupBasis": {
+        "id": "2026-09-17-flamengo-independiente-valle",
+        "date": "2026-09-18T00:30Z",
+        "game": "Flamengo × Independiente del Valle"
       }
     },
     {
       "id": "2026-10-11-flamengo-fluminense",
-      "date": "2026-10-11T17:30:00-03:00",
+      "date": "2026-10-11T20:30Z",
       "name": "Flamengo x Fluminense",
       "competition": "Serie A",
-      "status": "Estadio Jornalista Mário Filho (Maracanã)",
+      "status": "Scheduled",
       "state": "pre",
       "home": {
+        "id": "819",
         "name": "Flamengo",
-        "short": "",
-        "logo": "",
-        "score": ""
+        "short": "FLA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png",
+        "score": "0"
       },
       "away": {
+        "id": "3445",
         "name": "Fluminense",
-        "short": "",
-        "logo": "",
-        "score": ""
+        "short": "FLU",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png",
+        "score": "0"
+      },
+      "providerEventId": "401841263",
+      "providerLeague": "bra.1",
+      "venue": "Estadio do Maracana",
+      "broadcasts": [],
+      "coverageUrl": "https://www.espn.com/soccer/match/_/gameId/401841263/fluminense-flamengo",
+      "events": [],
+      "lineups": [
+        {
+          "teamId": "819",
+          "team": "Flamengo",
+          "formation": "4-2-3-1",
+          "starters": [
+            {
+              "id": "215388",
+              "name": "Agustín Rossi",
+              "number": "1",
+              "position": "G",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/215388/jersey.png?darkMode=false"
+            },
+            {
+              "id": "145405",
+              "name": "Léo Pereira",
+              "number": "4",
+              "position": "CD-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/145405/jersey.png?darkMode=false"
+            },
+            {
+              "id": "252316",
+              "name": "Léo Ortiz",
+              "number": "3",
+              "position": "CD-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/252316/jersey.png?darkMode=false"
+            },
+            {
+              "id": "203077",
+              "name": "Ayrton Lucas",
+              "number": "6",
+              "position": "LB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/203077/jersey.png?darkMode=false"
+            },
+            {
+              "id": "246844",
+              "name": "Emerson Royal",
+              "number": "22",
+              "position": "RB",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/246844/jersey.png?darkMode=false"
+            },
+            {
+              "id": "234715",
+              "name": "Lucas Paquetá",
+              "number": "20",
+              "position": "AM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/234715/jersey.png?darkMode=false"
+            },
+            {
+              "id": "165778",
+              "name": "Jorginho",
+              "number": "21",
+              "position": "LM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/165778/jersey.png?darkMode=false"
+            },
+            {
+              "id": "202533",
+              "name": "Erick Pulgar",
+              "number": "5",
+              "position": "RM",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/202533/jersey.png?darkMode=false"
+            },
+            {
+              "id": "201683",
+              "name": "Bruno Henrique",
+              "number": "27",
+              "position": "F",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/201683/jersey.png?darkMode=false"
+            },
+            {
+              "id": "253937",
+              "name": "Samuel Lino",
+              "number": "16",
+              "position": "AM-L",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/253937/jersey.png?darkMode=false"
+            },
+            {
+              "id": "208700",
+              "name": "Jorge Carrascal",
+              "number": "15",
+              "position": "AM-R",
+              "photo": "",
+              "fallbackPhoto": "https://stitcher.espn.com/sports/soccer/leagues/conmebol.libertadores/events/401912526/athletes/208700/jersey.png?darkMode=false"
+            }
+          ],
+          "probable": true
+        }
+      ],
+      "lineupStatus": "probable",
+      "dataSource": "ESPN",
+      "lineupBasis": {
+        "id": "2026-09-17-flamengo-independiente-valle",
+        "date": "2026-09-18T00:30Z",
+        "game": "Flamengo × Independiente del Valle"
       }
     }
   ]

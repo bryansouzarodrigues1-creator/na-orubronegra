@@ -89,12 +89,12 @@ const navigation=()=>`<nav id="navigation" aria-label="Seções">${mobileLanguag
 </nav>`;
 
 const portalMap=`<nav class="portal-map wrap" aria-label="Áreas do portal">
- <a class="portal-sector sector-match" data-view-link="matches" href="#jogos"><span>01 · DIA DE JOGO</span><strong>PLACAR,<br>ESCALAÇÃO<br>E PALPITE.</strong><small>Central completa →</small></a>
- <a class="portal-sector" data-view-link="community" href="#comunidade"><span>02 · ARQUIBANCADA</span><strong>OPINIÃO,<br>DEBATE<br>E CHAT.</strong><small>Entrar na conversa →</small></a>
- <a class="portal-sector" data-view-link="videos" href="#videos"><span>03 · MEMÓRIA</span><strong>VÍDEOS<br>HISTÓRICOS.</strong><small>Assistir no portal →</small></a>
- <a class="portal-sector" data-view-link="votes" href="#torcida"><span>04 · A NAÇÃO DECIDE</span><strong>VOTAÇÕES<br>E RANKINGS.</strong><small>Dar meu voto →</small></a>
- <a class="portal-sector" data-view-link="groups" href="#grupos"><span>05 · PELO MUNDO</span><strong>GRUPOS DA<br>TORCIDA.</strong><small>Encontrar meu grupo →</small></a>
- <a class="portal-sector" href="/historia"><span>06 · ARQUIVO</span><strong>HISTÓRIA<br>RUBRO-NEGRA.</strong><small>Relembrar conquistas →</small></a>
+ <a class="portal-sector sector-match" data-view-link="matches" href="#jogos"><img src="/*COVER_MATCHDAY*/" alt="" loading="eager" fetchpriority="high"><span>01 · DIA DE JOGO</span><strong>PLACAR,<br>ESCALAÇÃO<br>E PALPITE.</strong><small>Viver o próximo jogo →</small></a>
+ <a class="portal-sector" data-view-link="community" href="#comunidade"><img src="/*COVER_DISCUSSION*/" alt="" loading="lazy"><span>02 · ARQUIBANCADA</span><strong>OPINIÃO,<br>DEBATE<br>E CHAT.</strong><small>Entrar na resenha →</small></a>
+ <a class="portal-sector" data-view-link="videos" href="#videos"><img src="/*COVER_VIDEOS*/" alt="" loading="lazy"><span>03 · MEMÓRIA</span><strong>VÍDEOS<br>HISTÓRICOS.</strong><small>Rever jogos eternos →</small></a>
+ <a class="portal-sector" data-view-link="votes" href="#torcida"><img src="/*COVER_VOTES*/" alt="" loading="lazy"><span>04 · A NAÇÃO DECIDE</span><strong>VOTAÇÕES<br>E RANKINGS.</strong><small>Colocar meu voto no placar →</small></a>
+ <a class="portal-sector" data-view-link="groups" href="#grupos"><img src="/*COVER_GROUPS*/" alt="" loading="lazy"><span>05 · PELO MUNDO</span><strong>GRUPOS DA<br>TORCIDA.</strong><small>Encontrar minha Nação →</small></a>
+ <a class="portal-sector" href="/historia"><img src="/*COVER_HISTORY*/" alt="" loading="lazy"><span>06 · ARQUIVO</span><strong>HISTÓRIA<br>RUBRO-NEGRA.</strong><small>Entrar na memória →</small></a>
 </nav>`;
 
 const matchdayNow=`<div class="matchday-now">
@@ -109,9 +109,9 @@ const matchdayNow=`<div class="matchday-now">
   <p id="pulse-source" class="pulse-source">Fonte esportiva identificada · pode haver pequeno atraso</p>
  </section>
  <section class="flatv-live" aria-labelledby="flatv-title">
-  <div class="flatv-copy"><span class="eyebrow">CANAL OFICIAL</span><h3 id="flatv-title">FLAMENGO TV AO VIVO</h3><p>Assista à transmissão que estiver ao vivo no canal oficial sem sair do portal.</p></div>
-  <div id="flatv-frame" class="flatv-frame"><div class="flatv-poster"><img src="${CREST}" alt=""><span>FLAMENGO TV</span><button id="flatv-play" type="button">ABRIR TRANSMISSÃO ▶</button><small>O player abre aqui e só carrega depois do toque.</small></div></div>
-  <a class="flatv-fallback" href="https://www.youtube.com/@flamengo/live" target="_blank" rel="noopener">Ver canal oficial ↗</a>
+  <div class="flatv-copy"><span class="eyebrow">VOZ OFICIAL DO MENGÃO</span><h3 id="flatv-title">NARRAÇÃO DA FLA TV</h3><p>Quando a FlaTV abrir uma live do Flamengo, a narração aparece aqui sem prometer imagens da partida.</p></div>
+  <div id="flatv-frame" class="flatv-frame"><div class="flatv-poster"><img class="flatv-cover" src="/*COVER_MATCHDAY*/" alt="Torcida rubro-negra e estádio em noite de jogo"><div class="flatv-poster-copy"><span>CHECANDO A FLA TV…</span><button id="flatv-play" type="button" disabled>PROCURANDO LIVE</button><small id="flatv-status">Consultando o canal oficial.</small></div></div></div>
+  <a class="flatv-fallback" href="https://www.youtube.com/@flamengo/live" target="_blank" rel="noopener">Abrir a página de lives da FlaTV ↗</a>
  </section>
 </div>`;
 
@@ -187,7 +187,7 @@ const communityZone=`<section id="comunidade" class="community-zone">
 
 const portalAd=`<aside class="advert wrap portal-ad" aria-label="Espaço de publicidade"><span>PUBLICIDADE</span><div>Espaço reservado</div><small>Responsivo</small></aside>`;
 
-export function upgradeHome(value){
+export function upgradeHome(value,covers={}){
  return value
   .replace(/<div id="intro"[\s\S]*?(?=<div class="topline">)/,intro)
   .replace('</header>','</header>'+trustbar+navBackdrop)
@@ -228,5 +228,13 @@ export function upgradeHome(value){
   .replace('Dê uma nota de 1 a 10. A média só mostra votos reais da torcida.','Avalie só quem quiser. Arraste a nota e ela será salva ao soltar.')
   .replace('Agenda e local: site oficial do Flamengo. Escalações e probabilidades aparecem somente quando disponibilizadas pela fonte identificada. Palpites e notas são da torcida.','Jogos e locais vêm do Flamengo e da ESPN. Escalações confirmadas vêm da ficha da partida. Em jogos futuros, o time aparece como provável e mostra qual partida serviu de base. Palpites e notas são da torcida.')
   .replace('Buscando jogos do Flamengo…','Buscando placar, horário e escalações…')
+  .replace('</div><div id="lineup" aria-live="polite">','</div><aside id="where-to-watch" class="where-to-watch" aria-live="polite"><span class="eyebrow">ONDE ACOMPANHAR</span><strong>Consultando a ficha da partida…</strong></aside><div id="lineup" aria-live="polite">')
+  .replace('/*COVER_MATCHDAY*/',covers.matchday||'')
+  .replace('/*COVER_MATCHDAY*/',covers.matchday||'')
+  .replace('/*COVER_DISCUSSION*/',covers.discussion||'')
+  .replace('/*COVER_VIDEOS*/',covers.videos||'')
+  .replace('/*COVER_VOTES*/',covers.votes||'')
+  .replace('/*COVER_GROUPS*/',covers.groups||'')
+  .replace('/*COVER_HISTORY*/',covers.history||'')
   .replace('</main>',portalAd+'</main>');
 }
