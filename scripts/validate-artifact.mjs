@@ -13,5 +13,12 @@ const required=[
 ];
 for(const [marker,message] of required)if(!bundle.includes(marker))throw new Error(message);
 
+const preview=fs.readFileSync('vite.config.mjs','utf8');
+for(const marker of ['category-matchday.webp','category-discussion.webp','category-videos.webp','category-votes.webp','category-groups.webp','category-history.webp']){
+ if(!preview.includes(marker))throw new Error('A prévia do Lovable/Vite perdeu a capa '+marker);
+}
+if(!preview.includes("url.pathname==='/api/player-photo'"))throw new Error('A prévia não entrega as fotos das escalações');
+if(!preview.includes("url.pathname==='/api/flamengo-live'"))throw new Error('A prévia não verifica a live da FlaTV');
+
 if(bundle.includes('nacao-rubro-negra.bryansouzarodrigues0.chatgpt.site'))throw new Error('O domínio canônico antigo reapareceu no bundle');
 console.log('Artifact integrity: ok');

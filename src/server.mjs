@@ -105,7 +105,14 @@ export default {async fetch(request,env,ctx){const u=new URL(request.url);
   return new Response(html,{headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-cache','x-content-type-options':'nosniff'}});
  }
  if(u.pathname==='/sw.js')return new Response("self.addEventListener('install',()=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));self.addEventListener('notificationclick',e=>{e.notification.close();e.waitUntil(clients.matchAll({type:'window'}).then(ws=>{if(ws[0])return ws[0].focus();return clients.openWindow('/noticias')}))});",{headers:{'content-type':'text/javascript','cache-control':'no-cache'}});
- if(u.pathname==='/api/news'&&request.method==='GET')return json(await news());
+ if(u.pathname==='/api/news'&&request.method==='GET'){
+  if(Date.now()>=until&&ctx?.waitUntil){
+   const refresh=news();ctx.waitUntil(refresh);
+   const quick=await Promise.race([refresh,new Promise(resolve=>setTimeout(()=>resolve(null),1800))]);
+   return json(quick||{...current,refreshing:true});
+  }
+  return json(await news());
+ }
  if(u.pathname==='/api/matches'&&request.method==='GET'){
   if(ctx?.waitUntil&&Date.now()>=matchUntil){ctx.waitUntil(matches());return json({...matchCache,refreshing:true});}
   return json(await matches());
